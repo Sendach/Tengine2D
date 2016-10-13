@@ -1,4 +1,4 @@
-﻿Build started 2016-10-13 14:27:01.
+﻿Build started 2016-10-13 14:52:39.
      1>Project "D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\Tengine2D.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Includes" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ResourceManager.cpp
@@ -19,4 +19,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.74
+Time Elapsed 00:00:00.82
