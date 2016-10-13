@@ -1,24 +1,34 @@
 #include "TextCache.h"
 
+// C++ Standard Library
 #include <iostream>
 
-void TextCache::setupText(const std::string textName, const std::string fontPath)
-{
-	text = this->_createText->createText(textName, fontPath);
-	
-	auto textIterator = texts.find(textName);
+namespace t2d {
 
-	if (textIterator == texts.end()) // This means that it does not already exist, so we can go ahead and create it.
+	// Uses CreateText to create a text, and if done successfully it saves it in a std::map.
+	void TextCache::setupText(const std::string textName, const std::string fontPath)
 	{
-		texts.insert(make_pair(textName, text));
-	}
-	else
-	{
-		std::cout << "Error: Sprite With That Name Already Exists!" << std::endl;
-	}
-}
+		// Saves the created text.
+		text = CreateText::createText(textName, fontPath);
+		// / Iterates through all texts to check if the user-given name for the text is already taken.
+		auto textIterator = texts.find(textName);
 
-sf::Text& TextCache::getText(const std::string textName)
-{
-	return texts[textName];
+		// If the user-given name for the text does not previously exist. We Create it
+		if (textIterator == texts.end())
+		{
+			// Successfully binded the user-given name to the text.
+			texts.insert(make_pair(textName, text));
+		}
+		else
+		{	// User-given name for the text already exists.
+			std::cout << "Error: Text With That Name Already Exists!" << std::endl;
+		}
+	}
+
+	// Returns the text that is bound to the user-given name.
+	sf::Text& TextCache::getText(const std::string textName)
+	{
+		// Returns the text bound to the user-given name.
+		return texts[textName];
+	}
 }

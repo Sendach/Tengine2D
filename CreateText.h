@@ -1,22 +1,34 @@
 #ifndef CREATETEXT_HPP
 #define CREATETEXT_HPP
 
-// SFML
+// SFML.
 #include <SFML\Graphics\Text.hpp>
 
+// C++ Standard Library.
 #include <string>
 #include <map>
 
-class CreateText
-{
-public:
-	sf::Text& createText(const std::string name, const std::string path);
+namespace t2d {
 
-private:
-	CreateText() {}
-	std::map<std::string, sf::Font> _font;
-	sf::Text _text;
+	// A static class that creates and loads in Text & Font.
+	class CreateText
+	{
+
+	public:
+
+		// Creates a text & font.
+		static sf::Text& createText(const std::string name, const std::string path);
+
+	private:
+
+		// Unused Default Constructor.
+		CreateText() {}
+		// // A map which is used to bind and saves a user-given name to a new font.
+		static std::map<std::string, sf::Font> _font;
+		// When the Text is created it is bound to this variable, which is then set to put in the TextureCache.
+		static sf::Text _text;
 
 
-};
+	};
+}
 #endif
