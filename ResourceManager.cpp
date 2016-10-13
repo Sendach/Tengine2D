@@ -3,17 +3,17 @@
 namespace t2d {
 
 	//
-	static void createSprite(const std::string textureName, const std::string spritePath)
+	void ResourceManager::createSprite(const std::string textureName, const std::string spritePath)
 	{
 		SpriteCache::setupSprite(textureName, spritePath);
 	}
 	//
-	static void createSpriteCI(const std::string textureName, std::string spritePath, sf::IntRect cropped)
+	void ResourceManager::createSpriteCI(const std::string textureName, std::string spritePath, sf::IntRect cropped)
 	{
 		SpriteCache::setupSpriteCI(textureName, spritePath, cropped);
 	}
 	//
-	static void createText(const std::string textName, const std::string fontPath)
+	void ResourceManager::createText(const std::string textName, const std::string fontPath)
 	{
 		TextCache::setupText(textName, fontPath);
 	}
