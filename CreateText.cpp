@@ -11,8 +11,8 @@ sf::Text& CreateText::createText(const std::string name, const std::string fontP
 	}
 	else
 	{
-		text.setFont(_font[name]);
+		_text.setFont(_font[name]);
 	}
 
-	return this->text;
+	return this->_text;
 }

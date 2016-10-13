@@ -91,6 +91,7 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="SpriteCache.cpp" />
     <ClCompile Include="TextCache.cpp" />
+    <ClCompile Include="VectorFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CreateSprite.h" />
