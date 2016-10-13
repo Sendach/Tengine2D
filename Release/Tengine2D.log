@@ -1,8 +1,12 @@
-﻿Build started 2016-10-13 14:52:39.
+﻿Build started 2016-10-13 15:33:50.
      1>Project "D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\Tengine2D.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Includes" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ResourceManager.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Includes" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CreateSprite.cpp CreateText.cpp ResourceManager.cpp SpriteCache.cpp TextCache.cpp
+         CreateSprite.cpp
+         CreateText.cpp
          ResourceManager.cpp
+         SpriteCache.cpp
+         TextCache.cpp
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Visual Studio Projects\GitHub\Tengine2D\Release\Tengine2D.lib" "sfml-system.lib" "sfml-window.lib" "sfml-graphics.lib" "sfml-audio.lib" sfgui.lib /LIBPATH:"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Libraries\SFML" /LIBPATH:"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Libraries\SFGUI" /NOLOGO /LTCG Release\CreateSprite.obj
          Release\CreateText.obj
@@ -19,4 +23,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.82
+Time Elapsed 00:00:01.96
