@@ -1,31 +1,9 @@
-﻿Build started 2016-10-13 15:33:44.
+﻿Build started 2016-10-13 15:45:43.
      1>Project "D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\Tengine2D.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Includes" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CreateSprite.cpp CreateText.cpp ResourceManager.cpp SpriteCache.cpp TextCache.cpp
-         TextCache.cpp
-         SpriteCache.cpp
-         ResourceManager.cpp
-         CreateText.cpp
-         CreateSprite.cpp
-         Generating Code...
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Visual Studio Projects\GitHub\Tengine2D\Debug\Tengine2D.lib" "sfml-system-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" "sfml-audio-d.lib" "sfgui-d.lib" /LIBPATH:"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Libraries\SFML" /NOLOGO Debug\CreateSprite.obj
-         Debug\CreateText.obj
-         Debug\ResourceManager.obj
-         Debug\SpriteCache.obj
-         Debug\TextCache.obj
-         Debug\VectorFunctions.obj
-     1>sfml-window-d.lib(sfml-window-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
-     1>sfml-window-d.lib(sfml-window-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-     1>sfml-graphics-d.lib(sfml-graphics-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
-     1>sfml-graphics-d.lib(sfml-graphics-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-     1>sfml-audio-d.lib(sfml-audio-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
-     1>sfml-audio-d.lib(sfml-audio-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-     1>sfgui-d.lib(sfgui-d.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
-     1>sfgui-d.lib(sfgui-d.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>Lib:
          Tengine2D.vcxproj -> D:\Visual Studio Projects\GitHub\Tengine2D\Debug\Tengine2D.lib
      1>Done Building Project "D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\Tengine2D.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.14
+Time Elapsed 00:00:00.03
