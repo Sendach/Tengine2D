@@ -1,9 +1,29 @@
-﻿Build started 2016-10-13 15:38:56.
+﻿Build started 2016-10-14 01:53:03.
      1>Project "D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\Tengine2D.vcxproj" on node 2 (Build target(s)).
-     1>Lib:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Includes" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Draw.cpp Event.cpp Keyboard.cpp Window.cpp
+         Draw.cpp
+         Event.cpp
+         Keyboard.cpp
+         Window.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Visual Studio Projects\GitHub\Tengine2D\Release\Tengine2D.lib" "sfml-system.lib" "sfml-window.lib" "sfml-graphics.lib" "sfml-audio.lib" sfgui.lib /LIBPATH:"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Libraries\SFML" /LIBPATH:"D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\\Graphics\Libraries\SFGUI" /NOLOGO /LTCG Release\CreateSprite.obj
+         Release\CreateText.obj
+         Release\Draw.obj
+         Release\Event.obj
+         Release\Keyboard.obj
+         Release\ResourceManager.obj
+         Release\SpriteCache.obj
+         Release\TextCache.obj
+         Release\VectorFunctions.obj
+         Release\Window.obj
+     1>sfml-window.lib(sfml-window-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system.lib(sfml-system-2.dll); second definition ignored
+     1>sfml-graphics.lib(sfml-graphics-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system.lib(sfml-system-2.dll); second definition ignored
+     1>sfml-audio.lib(sfml-audio-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system.lib(sfml-system-2.dll); second definition ignored
+     1>sfgui.lib(sfgui.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system.lib(sfml-system-2.dll); second definition ignored
          Tengine2D.vcxproj -> D:\Visual Studio Projects\GitHub\Tengine2D\Release\Tengine2D.lib
      1>Done Building Project "D:\Visual Studio Projects\GitHub\Tengine2D\Tengine2D\Tengine2D.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.13
+Time Elapsed 00:00:01.68

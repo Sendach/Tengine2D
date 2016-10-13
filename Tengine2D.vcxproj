@@ -88,18 +88,26 @@
   <ItemGroup>
     <ClCompile Include="CreateSprite.cpp" />
     <ClCompile Include="CreateText.cpp" />
+    <ClCompile Include="Draw.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="SpriteCache.cpp" />
     <ClCompile Include="TextCache.cpp" />
     <ClCompile Include="VectorFunctions.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CreateSprite.h" />
     <ClInclude Include="CreateText.h" />
+    <ClInclude Include="Draw.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="Keyboard.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="SpriteCache.h" />
     <ClInclude Include="TextCache.h" />
     <ClInclude Include="VectorFunctions.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
