@@ -3,7 +3,7 @@
 
 // SFML.
 #include <SFML\Graphics\RenderWindow.hpp>
-#include <SFML\Graphics\Sprite.hpp>
+#include <SFML\Graphics\Drawable.hpp>
 
 // A static class that Window.h uses to draw.
 class Draw
@@ -11,7 +11,7 @@ class Draw
 public:
 
 	// Draws everything on the screen.
-	static void draw(sf::RenderWindow& window, sf::Sprite& sprite);
+	static void draw(sf::RenderWindow& window, const sf::Drawable& drawable);
 
 private:
 
