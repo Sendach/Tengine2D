@@ -16,9 +16,9 @@ namespace t2d {
 	public:
 
 		// Returns the sprite bound to the user-given name.
-		static sf::Sprite& getSprite(std::string spriteName);
+		static t2d::Sprite& getSprite(std::string spriteName);
 		// Returns the text bound to the user-given name.
-		static sf::Text& getText(std::string textName);
+		static t2d::Text& getText(std::string textName);
 		// Creates a sprite using TextureCache.h & CreateSprite.h
 		static void createSprite(const std::string textureName, const std::string spritePath);
 		// Creates a (cropped)sprite using SpriteCache.h & CreateSprite.h
