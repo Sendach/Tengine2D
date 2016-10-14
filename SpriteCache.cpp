@@ -8,7 +8,6 @@ sf::Sprite SpriteCache::sprite;
 // Uses CreateSprite to create a sprite, and if done successfully it saves it in a std::map.
 void SpriteCache::setupSprite(const std::string spriteName, const std::string path)
 {
-
 	// Saves the created sprite.
 	sprite = CreateSprite::createSprite(spriteName, path);
 	// / Iterates through all sprites to check if the user-given name for the sprite is already taken.
