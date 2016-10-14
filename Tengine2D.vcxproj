@@ -83,9 +83,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="Clock.cpp" />
     <ClCompile Include="CreateSprite.cpp" />
     <ClCompile Include="CreateText.cpp" />
     <ClCompile Include="Draw.cpp" />
@@ -93,11 +91,14 @@
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="SpriteCache.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextCache.cpp" />
+    <ClCompile Include="Time.cpp" />
     <ClCompile Include="VectorFunctions.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Clock.h" />
     <ClInclude Include="CreateSprite.h" />
     <ClInclude Include="CreateText.h" />
     <ClInclude Include="Draw.h" />
@@ -105,9 +106,14 @@
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="SpriteCache.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="TextCache.h" />
+    <ClInclude Include="Time.h" />
     <ClInclude Include="VectorFunctions.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Tengine2DReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
