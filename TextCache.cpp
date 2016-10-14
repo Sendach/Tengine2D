@@ -2,8 +2,8 @@
 // C++ Standard Library
 #include <iostream>
 // Initialize Static variables.
-std::map<std::string, sf::Text> TextCache::_text;
-sf::Text TextCache::text;
+std::map<std::string, t2d::Text> TextCache::_text;
+t2d::Text TextCache::text;
 
 // Uses CreateText to create a text, and if done successfully it saves it in a std::map.
 void TextCache::setupText(const std::string textName, const std::string fontPath)
@@ -26,7 +26,7 @@ void TextCache::setupText(const std::string textName, const std::string fontPath
 }
 
 // Returns the text that is bound to the user-given name.
-sf::Text& TextCache::getText(const std::string textName)
+t2d::Text& TextCache::getText(const std::string textName)
 {
 	// Returns the text bound to the user-given name.
 	return _text[textName];
