@@ -4,6 +4,9 @@
 // SFML.
 #include <SFML\Window\Keyboard.hpp>
 
+// Classes
+#include "Event.h"
+
 namespace t2d {
 
 	// A Keyboard class
@@ -41,9 +44,10 @@ namespace t2d {
 			F15, Pause, KeyCount
 		};
 
-		// Returns true if the key is being pressed
+		// Returns true if the key is being pressed.
 		 static bool isKeyPressed(Key key);
-		
+		 // Returns true if key was pressed once.
+		 static bool keyPressed(Key key);
 	private:
 		Keyboard() {}
 	};
