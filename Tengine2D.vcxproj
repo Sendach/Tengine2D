@@ -84,6 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="CreateSprite.cpp" />
     <ClCompile Include="CreateText.cpp" />
     <ClCompile Include="Draw.cpp" />
@@ -104,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="CreateSprite.h" />
     <ClInclude Include="CreateText.h" />
     <ClInclude Include="Draw.h" />
