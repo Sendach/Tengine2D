@@ -36,12 +36,18 @@ Window::Style Window::_style;
 		Draw::draw(_window, text);
 	}
 
-	// Clears screen.
+	// Clears the screen.
 	void Window::clear()
 	{
 		_window.clear();
 	}
 	
+	// Clears the screen with user-given color.
+	void Window::clear(t2d::Color colour)
+	{
+		_window.clear(sf::Color(colour._r, colour._g, colour._b, colour._a));
+	}
+
 	/// Displays everything on the screen.
 	void Window::display()
 	{

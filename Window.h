@@ -37,6 +37,8 @@ namespace t2d {
 		static void draw(const t2d::Text& text);
 		// Clears the screens.
 		static void clear();
+		// Clears the screen with user-given color.
+		static void clear(t2d::Color colour);
 		// Displays everything on the screen.
 		static void display();
 		// Closes The Screen.
