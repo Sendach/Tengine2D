@@ -88,12 +88,17 @@
     <ClCompile Include="CreateText.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="SpriteCache.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextCache.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="VectorFunctions.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -103,12 +108,17 @@
     <ClInclude Include="CreateText.h" />
     <ClInclude Include="Draw.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteCache.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextCache.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="Vector2.h" />
     <ClInclude Include="VectorFunctions.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
