@@ -1,6 +1,5 @@
 #include "Text.h"
 
-
 namespace t2d {
 
 	// Default Constructor sets position of text to (0, 0)
@@ -55,9 +54,9 @@ namespace t2d {
 	}
 
 	// Sets text color
-	void Text::setColor(sf::Color color)
+	void Text::setColor(t2d::Colors color)
 	{
-		_text.setFillColor(color);
+		_text.setFillColor(t2d::Color::getColor(color));
 	}
 
 	// Sets the position of the text.

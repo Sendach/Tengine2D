@@ -7,6 +7,7 @@
 // Classes
 #include "Vector2.h"
 #include "Font.h"
+#include "Color.h"
 
 namespace t2d {
 
@@ -47,7 +48,7 @@ namespace t2d {
 		void setStyle(t2d::Text::Style style);
 
 		// Sets text color
-		void setColor(sf::Color color);
+		void setColor(t2d::Colors color);
 
 		// Gets the font that belongs to this text. */Havent figured out how to do it yet */
 		t2d::Font& getFont();
