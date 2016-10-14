@@ -2,8 +2,8 @@
 // C++ Standard Library
 #include <iostream>
 // Initialize Static variables.
-std::map<std::string, sf::Sprite> SpriteCache::_sprite;
-sf::Sprite SpriteCache::sprite;
+std::map<std::string, t2d::Sprite> SpriteCache::_sprite;
+t2d::Sprite SpriteCache::sprite;
 
 // Uses CreateSprite to create a sprite, and if done successfully it saves it in a std::map.
 void SpriteCache::setupSprite(const std::string spriteName, const std::string path)
@@ -46,7 +46,7 @@ void SpriteCache::setupSpriteCI(const std::string spriteName, const std::string 
 }
 
 // Returns the sprite that is bound to the user-given name.
-sf::Sprite& SpriteCache::getSprite(std::string spriteName)
+t2d::Sprite& SpriteCache::getSprite(std::string spriteName)
 {
 	return _sprite[spriteName];
 }
