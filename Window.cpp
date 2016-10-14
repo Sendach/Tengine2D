@@ -26,12 +26,17 @@ Window::Style Window::_style;
 	}
 
 	// Draw to the screen.
-	void Window::draw(const sf::Drawable& drawable)
+	void Window::draw(const t2d::Sprite& sprite)
 	{
-		Draw::draw(_window, drawable);
+		Draw::draw(_window, sprite);
 	}
-	
-	// Draws.
+
+	void Window::draw(const t2d::Text& text)
+	{
+		Draw::draw(_window, text);
+	}
+
+	// Clears screen.
 	void Window::clear()
 	{
 		_window.clear();

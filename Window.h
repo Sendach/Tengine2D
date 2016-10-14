@@ -31,8 +31,10 @@ namespace t2d {
 		static void create(int screenWidth, int screenHeight, std::string windowName);
 		// Creates a window, with an added style, ex. Fullscreen.
 		static void create(int screenWidth, int screenHeight, std::string windowName, Window::Style style);
-		// Draw to the screen.
-		static void draw(const sf::Drawable& drawable);
+		// Draws a sprite to the screen.
+		static void draw(const t2d::Sprite& sprite);
+		//  Draws a text to the screen
+		static void draw(const t2d::Text& text);
 		// Clears the screens.
 		static void clear();
 		// Displays everything on the screen.
