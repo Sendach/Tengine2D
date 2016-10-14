@@ -7,11 +7,13 @@ namespace t2d {
 	{
 		SpriteCache::setupSprite(textureName, spritePath);
 	}
+
 	// Creates a (cropped)sprite using SpriteCache.h & CreateSprite.h
 	void ResourceManager::createSpriteCI(const std::string textureName, std::string spritePath, sf::IntRect cropped)
 	{
 		SpriteCache::setupSpriteCI(textureName, spritePath, cropped);
 	}
+
 	// Creates a text using TextCache.h & CreateText.h
 	void ResourceManager::createText(const std::string textName, const std::string fontPath)
 	{
