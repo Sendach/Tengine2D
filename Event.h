@@ -1,6 +1,9 @@
 #ifndef EVENT_HPP
 #define EVENT_HPP
 
+// Classes
+#include "Keyboard.h"
+
 // SFML.
 #include <SFML\Window\Event.hpp>
 
@@ -10,10 +13,10 @@ namespace t2d {
 	class Event
 	{
 	public:
-
+	
 		// Gets the event.
 		static sf::Event& getEvent();
-
+		
 		// The different types of events.
 		enum {
 			Closed,
