@@ -9,6 +9,7 @@
 
 // Classes.
 #include "Draw.h"
+#include "Event.h"
 
 namespace t2d {
 
@@ -17,12 +18,21 @@ namespace t2d {
 	{
 	public:
 
+		// Different styles to create the window with.
+		enum  Style	{
+			None = 0,
+			Titlebar = 1 << 0,
+			Resize = 1 << 1,
+			Close = 1 << 2,
+			Fullscreen = 1 << 3
+		};
+
 		// Creates a window.
 		static void create(int screenWidth, int screenHeight, std::string windowName);
 		// Creates a window, with an added style, ex. Fullscreen.
-		static void create(int screenWidth, int screenHeight, std::string windowName,  int Style);
+		static void create(int screenWidth, int screenHeight, std::string windowName, Window::Style style);
 		// Draw to the screen.
-		static void draw(sf::Sprite& sprite);
+		static void draw(const sf::Drawable& drawable);
 		// Clears the screens.
 		static void clear();
 		// Displays everything on the screen.
@@ -30,7 +40,7 @@ namespace t2d {
 		// Closes The Screen.
 		static void close();
 		// Pops the event on top of the event queue, if any, and returns it.
-		static bool pollEvent(sf::Event& _event);
+		static bool pollEvent();
 
 		// Settings & Getters.
 		
@@ -44,6 +54,21 @@ namespace t2d {
 		// Get screen Height.
 		static int getScreenHeight();
 
+		// Set name of window.
+		static void setWindowName(std::string windowName);
+		// Get name of window.
+		static std::string getWindowName();
+
+		// Set window style.
+		static void setWindowStyle(Style style);
+		// Get window style.
+		static Style getWindowStyle();
+
+		// Set window Size
+		static void setSize(int screenWidth, int screenHeight);
+		// Note: getSize - Returns a tuple?
+			
+		
 		
 	private:
 		// Unused Default Constructor.
@@ -52,6 +77,10 @@ namespace t2d {
 		static int _screenWidth;
 		// Height of the screen.
 		static int _screenHeight;
+		// Name of the window.
+		static std::string _windowName;
+		// window Style.
+		static Style _style;
 		// The Window.
 		static sf::RenderWindow _window;
 
