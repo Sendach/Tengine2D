@@ -3,6 +3,7 @@
 
 // SFML.
 #include <SFML\Graphics\Text.hpp>
+#include <SFML\Graphics\Font.hpp>
 
 // C++ Standard Library.
 #include <string>
@@ -15,7 +16,7 @@ class CreateText
 public:
 
 	// Creates a text & font.
-	static sf::Text& createText(const std::string name, const std::string path);
+	static sf::Text& createText(const std::string textName, const std::string path);
 
 private:
 
