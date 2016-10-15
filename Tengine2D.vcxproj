@@ -83,6 +83,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="CreateSprite.cpp" />
@@ -107,6 +108,7 @@
     <Text Include="Tengine2DReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Clock.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="CreateSprite.hpp" />
