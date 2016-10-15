@@ -9,6 +9,25 @@ int Window::_screenHeight;
 std::string Window::_windowName;
 Window::Style Window::_style;
 
+	// Constructor that creates a window.
+	Window::Window(int screenWidth, int screenHeight, std::string windowName)
+	{
+		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName);
+		_screenWidth = screenWidth;
+		_screenHeight = screenHeight;
+		_windowName = windowName;
+	}
+
+	// Constructor that creates a window.
+	Window::Window(int screenWidth, int screenHeight, std::string windowName, Window::Style style)
+	{
+		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName, style);
+
+		_screenWidth = screenWidth;
+		_screenHeight = screenHeight;
+		_windowName = windowName;
+	}
+
 	// Creates a window.
 	void Window::create(int screenWidth, int screenHeight, std::string windowName)
 	{
@@ -23,15 +42,19 @@ Window::Style Window::_style;
 	void Window::create(int screenWidth, int screenHeight, std::string windowName, Window::Style style)
 	{
 		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName, style);
+
+		_screenWidth = screenWidth;
+		_screenHeight = screenHeight;
+		_windowName = windowName;
 	}
 
 	// Draw to the screen.
-	void Window::draw(const t2d::Sprite& sprite)
+	void Window::draw(const Sprite& sprite)
 	{
 		Draw::draw(_window, sprite);
 	}
 
-	void Window::draw(const t2d::Text& text)
+	void Window::draw(const Text& text)
 	{
 		Draw::draw(_window, text);
 	}
@@ -63,8 +86,14 @@ Window::Style Window::_style;
 	// Pops the event on top of the event queue, if any, and returns it.
 	bool Window::pollEvent()
 	{
-		return _window.pollEvent(t2d::Event::getEvent());
+		return _window.pollEvent(Event::_event);
 	}
+
+	// Gets the window
+	//t2d::Window& Window::getWindow()
+	//{
+	//	//return _window;
+	//}
 
 	// Set screen width.
 	void Window::setScreenWidth(int screenWidth)
@@ -122,6 +151,27 @@ Window::Style Window::_style;
 	void Window::setSize(int screenWidth, int screenHeight)
 	{
 		_window.setSize(sf::Vector2u(screenWidth, screenHeight));
-
+		_screenWidth = screenWidth;
+		_screenHeight = screenHeight;;
 	}
+
+	// Set Window Size, using Vector2f
+	void Window::setSize(t2d::Vector2u size)
+	{
+		_window.setSize(sf::Vector2u(size.x, size.y));
+		_screenWidth = size.x;
+		_screenHeight = size.y;
+	}
+
+	// Get window size - Return Vector2f
+	t2d::Vector2u& Window::getSize()
+	{
+		return t2d::Vector2u(_screenWidth, _screenHeight);
+	}
+
+	// Sets the camera view
+	//void Window::setCamera(t2d::Camera camera)
+	//{
+	//	//Window::_window.setView(camera.);
+	//}
 }
