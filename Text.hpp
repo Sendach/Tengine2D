@@ -5,9 +5,9 @@
 #include <SFML\Graphics\Text.hpp>
 
 // Classes
-#include "Vector2.h"
-#include "Font.h"
-#include "Color.h"
+#include "Vector2.hpp"
+#include "Font.hpp"
+#include "Color.hpp"
 
 namespace t2d {
 

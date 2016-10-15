@@ -1,5 +1,5 @@
-#include "Sprite.h"
-#include "Sprite.h"
+#include "Sprite.hpp"
+
 
 namespace t2d {
 

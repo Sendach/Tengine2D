@@ -1,4 +1,4 @@
-#include "VectorFunctions.h"
+#include "VectorFunctions.hpp"
 
 namespace t2d {
 

@@ -5,7 +5,7 @@
 #include <SFML\Window\Keyboard.hpp>
 
 // Classes
-#include "Event.h"
+#include "Event.hpp"
 
 namespace t2d {
 

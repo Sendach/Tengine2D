@@ -5,8 +5,8 @@
 #include <SFML\Graphics\Sprite.hpp>
 
 // Classes
-#include "Vector2.h"
-#include "Texture.h"
+#include "Vector2.hpp"
+#include "Texture.hpp"
 
 namespace t2d {
 	// A class that represents a sprite.

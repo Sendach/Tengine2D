@@ -1,4 +1,4 @@
-#include "GameState.h"
+#include "GameState.hpp"
 
 
 namespace t2d {

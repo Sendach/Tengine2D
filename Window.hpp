@@ -8,8 +8,8 @@
 #include <string>
 
 // Classes.
-#include "Draw.h"
-#include "Event.h"
+#include "Draw.hpp"
+#include "Event.hpp"
 
 namespace t2d {
 

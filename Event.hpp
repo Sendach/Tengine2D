@@ -2,7 +2,7 @@
 #define EVENT_HPP
 
 // Classes
-#include "Keyboard.h"
+#include "Keyboard.hpp"
 
 // SFML.
 #include <SFML\Window\Event.hpp>

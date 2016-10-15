@@ -9,6 +9,8 @@
 
 
 namespace t2d {
+
+	// Font class.
 	class Font
 	{
 	public:

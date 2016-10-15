@@ -2,8 +2,8 @@
 #define RESOURCEMANAGER_HPP
 
 // Classes
-#include "SpriteCache.h"
-#include "TextCache.h"
+#include "SpriteCache.hpp"
+#include "TextCache.hpp"
 
 // C++ Standard Library
 #include <string>
