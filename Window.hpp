@@ -87,9 +87,8 @@ namespace t2d {
 		//  Get window size - Returns a Vector2u
 		t2d::Vector2u& getSize();
 		
-		
-		// Sets the camera view
-		void setCamera(t2d::Camera camera);
+		// Calls function setCamera in Camera.hpp with _window as argument.
+		void setView(t2d::Camera camera);
 		
 
 		

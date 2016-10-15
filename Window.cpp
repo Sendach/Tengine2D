@@ -170,8 +170,8 @@ namespace t2d {
 	}
 
 	// Sets the camera view
-	void Window::setCamera(t2d::Camera camera)
+	void Window::setView(t2d::Camera camera)
 	{
-		_window.setView(camera.getCamera());
+		camera.setView(_window);
 	}
 }
