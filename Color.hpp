@@ -10,30 +10,23 @@
 
 namespace t2d {
 
-	// Currently existing colors
-	enum  Colors	{
-		Black,
-		White,
-		Red,
-		Green,
-		Blue,
-		Yellow,
-		Magenta,
-		Cyan,
-		Transparent
-	};
-
 	// Color class
 	class Color
 	{
 	public:
 
 		// Constructor which takes in color values for rgba.
-		Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a);
+		Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a = 255);
+		// Constructor used to define Colors using the pre-defined sf::Colors
+		Color::Color(const sf::Color color);
+
+		// Overloaded== operator used to compare user-given color, using The Engine's Color class. To pre-defined sf::colors.
+		friend bool operator== (const t2d::Color& color, const t2d::Color& sfcolor);
+		
 
 		// Determines the color the user chosen with if statements
 		// Returns that color in const sf::Color.
-		static const sf::Color& getColor(t2d::Colors col);
+		static const sf::Color& getColor(t2d::Color color);
 		
 		// Red component
 		uint8_t _r;
@@ -43,11 +36,22 @@ namespace t2d {
 		uint8_t _b;
 		// Alpha component
 		uint8_t _a;
+
+		// All of the colors the user can use.
+		static const Color Black;       
+		static const Color White;       
+		static const Color Red;         
+		static const Color Green;       
+		static const Color Blue;        
+		static const Color Yellow;      
+		static const Color Magenta;     
+		static const Color Cyan;        
+		static const Color Transparent; 
+
 	private:
 		
 		// Unused default constructor
 		Color() { }
-		
 	};
 }
 #endif
