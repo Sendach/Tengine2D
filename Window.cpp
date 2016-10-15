@@ -3,11 +3,11 @@
 namespace t2d {
 
 // Initialize Static variables.
-sf::RenderWindow Window::_window;
-int Window::_screenWidth;
-int Window::_screenHeight;
-std::string Window::_windowName;
-Window::Style Window::_style;
+//sf::RenderWindow Window::_window;
+//int Window::_screenWidth;
+//int Window::_screenHeight;
+//std::string Window::_windowName;
+//Window::Style Window::_style;
 
 	// Constructor that creates a window.
 	Window::Window(int screenWidth, int screenHeight, std::string windowName)
@@ -170,8 +170,8 @@ Window::Style Window::_style;
 	}
 
 	// Sets the camera view
-	//void Window::setCamera(t2d::Camera camera)
-	//{
-	//	//Window::_window.setView(camera.);
-	//}
+	void Window::setCamera(t2d::Camera camera)
+	{
+		_window.setView(camera.getCamera());
+	}
 }
