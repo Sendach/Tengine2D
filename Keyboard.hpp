@@ -5,7 +5,7 @@
 // SFML.
 #include <SFML\Window\Keyboard.hpp>
 
-// Classes
+// Engine Classes
 #include "Event.hpp"
 
 namespace t2d {
