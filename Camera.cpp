@@ -2,7 +2,12 @@
 
 namespace t2d {
 
-	void Camera::create(sf::FloatRect rect)
+	Camera::Camera(sf::FloatRect rect)
+	{
+		_camera.reset(rect);
+	}
+
+	void Camera::reset(sf::FloatRect rect)
 	{
 		_camera.reset(rect);
 	}
@@ -27,6 +32,9 @@ namespace t2d {
 		return t2d::Vector2f(_camera.getSize().x, _camera.getSize().y);
 	}
 
-
+	sf::View& Camera::getCamera()
+	{
+		return _camera;
+	}
 }
 

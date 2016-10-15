@@ -8,7 +8,6 @@
 
 // Engine Classes
 #include "Vector2.hpp"
-#include "Window.hpp"
 
 namespace t2d {
 
@@ -16,19 +15,12 @@ namespace t2d {
 	{
 	public:
 		Camera() { }
-		//
-		Camera(sf::FloatRect rect)
-		{
-			_camera.reset(rect);
-		}
 
-		/*static t2d::Camera getCamera()
-		{
-			return 
-		}*/
-
+		// Reset camera to a certain view using sf::floatrect.
+		Camera(sf::FloatRect rect);
+	
 		// Creates a Camera.
-		void create(sf::FloatRect rec);
+		void reset(sf::FloatRect rect);
 
 		// Zooms in if factor is a value above 1.0f, zooms out if vice versa.
 		void zoom(float factor);
@@ -38,8 +30,10 @@ namespace t2d {
 		// Sets The size of the camera view.
 		void setSize(float width, float height);
 		//  Returns size of the camera view.
-		 const t2d::Vector2f& getSize();
+		const t2d::Vector2f& getSize();
 		
+		 // Returns the camera. Only used by Window.hpp to setView().
+		 sf::View& getCamera();
 
 	private:
 
