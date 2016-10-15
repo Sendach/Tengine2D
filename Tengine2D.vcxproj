@@ -104,28 +104,28 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Clock.h" />
-    <ClInclude Include="Color.h" />
-    <ClInclude Include="CreateSprite.h" />
-    <ClInclude Include="CreateText.h" />
-    <ClInclude Include="Draw.h" />
-    <ClInclude Include="Event.h" />
-    <ClInclude Include="Font.h" />
-    <ClInclude Include="GameState.h" />
-    <ClInclude Include="Keyboard.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="SpriteCache.h" />
-    <ClInclude Include="Text.h" />
-    <ClInclude Include="TextCache.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Time.h" />
-    <ClInclude Include="Vector2.h" />
-    <ClInclude Include="VectorFunctions.h" />
-    <ClInclude Include="Window.h" />
+    <Text Include="Tengine2DReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Tengine2DReadMe.txt" />
+    <ClInclude Include="Clock.hpp" />
+    <ClInclude Include="Color.hpp" />
+    <ClInclude Include="CreateSprite.hpp" />
+    <ClInclude Include="CreateText.hpp" />
+    <ClInclude Include="Draw.hpp" />
+    <ClInclude Include="Event.hpp" />
+    <ClInclude Include="Font.hpp" />
+    <ClInclude Include="GameState.hpp" />
+    <ClInclude Include="Keyboard.hpp" />
+    <ClInclude Include="ResourceManager.hpp" />
+    <ClInclude Include="Sprite.hpp" />
+    <ClInclude Include="SpriteCache.hpp" />
+    <ClInclude Include="Text.hpp" />
+    <ClInclude Include="TextCache.hpp" />
+    <ClInclude Include="Texture.hpp" />
+    <ClInclude Include="Time.hpp" />
+    <ClInclude Include="Vector2.hpp" />
+    <ClInclude Include="VectorFunctions.hpp" />
+    <ClInclude Include="Window.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
