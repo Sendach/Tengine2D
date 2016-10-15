@@ -21,13 +21,13 @@ namespace t2d {
 	}
 
 	// Returns the sprite bound to the user-given name.
-	t2d::Sprite& ResourceManager::getSprite(std::string spriteName)
+	Sprite& ResourceManager::getSprite(std::string spriteName)
 	{
 		return SpriteCache::getSprite(spriteName);
 	}
 
 	// Returns the text bound to the user-given name.
-	t2d::Text& ResourceManager::getText(std::string textName)
+	Text& ResourceManager::getText(std::string textName)
 	{
 		return TextCache::getText(textName);
 	}
