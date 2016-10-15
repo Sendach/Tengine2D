@@ -28,10 +28,6 @@ private:
 
 	// Unused Default Constructor.
 	SpriteCache() { }
-	// Saves and binds a user-given name to the created text.
-	static std::map<std::string, Sprite> _sprite;
-	// The sprite that is created in CreateSprite is temporarily saved in this variable before placed in the std::map.
-	static Sprite sprite;
 
 };
 

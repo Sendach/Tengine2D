@@ -2,15 +2,14 @@
 // C++ Standard Library
 #include <iostream>
 
-// Initialize Static variables.
-std::map<std::string, Sprite> SpriteCache::_sprite;
-Sprite SpriteCache::sprite;
+// Saves and binds a user-given name to the created text.
+static std::map<std::string, Sprite> _sprite;
 
 // Uses CreateSprite to create a sprite, and if done successfully it saves it in a std::map.
 void SpriteCache::setupSprite(const std::string spriteName, const std::string path)
 {
 	// Saves the created sprite.
-	sprite = CreateSprite::createSprite(spriteName, path);
+	Sprite sprite = CreateSprite::createSprite(spriteName, path);
 	// / Iterates through all sprites to check if the user-given name for the sprite is already taken.
 	auto spriteIterator = _sprite.find(spriteName); // Iterates through all sprites to check if the name the user has chosen for the sprite is already taken.
 
@@ -30,7 +29,7 @@ void SpriteCache::setupSprite(const std::string spriteName, const std::string pa
 void SpriteCache::setupSpriteCI(const std::string spriteName, const std::string path, sf::IntRect cropped)
 {
 	// Saves the created sprite.
-	sprite = CreateSprite::createSpriteCI(spriteName, path, cropped);
+	Sprite sprite = CreateSprite::createSpriteCI(spriteName, path, cropped);
 	// / Iterates through all sprites to check if the user-given name for the sprite is already taken.
 	auto spriteIterator = _sprite.find(spriteName);
 
