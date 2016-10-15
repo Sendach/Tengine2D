@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VECTORFUNCTIONS_H
 #define VECTORFUNCTIONS_H
 

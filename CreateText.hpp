@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CREATETEXT_HPP
 #define CREATETEXT_HPP
 

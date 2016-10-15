@@ -1,3 +1,4 @@
+#pragma once
 #ifndef RESOURCEMANAGER_HPP
 #define RESOURCEMANAGER_HPP
 
@@ -10,7 +11,7 @@
 
 namespace t2d {
 
-	// A class which The user can use to get their texts & sprites.
+	// A class which The user can use to Create Sprites & texts, as well as to get them.
 	class ResourceManager
 	{
 	public:

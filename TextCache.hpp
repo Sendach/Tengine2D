@@ -1,3 +1,4 @@
+#pragma once
 #ifndef TEXTCACHE_HPP
 #define TEXTCACHE_HPP
 

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CREATESPRITE_HPP
 #define CREATESPRITE_HPP
 

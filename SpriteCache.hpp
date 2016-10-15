@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SPRITECACHE_HPP
 #define SPRITECACHE_HPP
 
