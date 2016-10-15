@@ -32,9 +32,10 @@ namespace t2d {
 		return t2d::Vector2f(_camera.getSize().x, _camera.getSize().y);
 	}
 
-	sf::View& Camera::getCamera()
+	// Sets the camera view
+	void Camera::setView(sf::RenderWindow& window)
 	{
-		return _camera;
+		window.setView(_camera);
 	}
 }
 

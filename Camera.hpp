@@ -5,6 +5,7 @@
 // SFML.
 #include <SFML\Graphics\View.hpp>
 #include <SFML\Graphics\Rect.hpp>
+#include <SFML\Graphics\RenderWindow.hpp>
 
 // Engine Classes
 #include "Vector2.hpp"
@@ -31,9 +32,9 @@ namespace t2d {
 		void setSize(float width, float height);
 		//  Returns size of the camera view.
 		const t2d::Vector2f& getSize();
-		
-		 // Returns the camera. Only used by Window.hpp to setView().
-		 sf::View& getCamera();
+
+		// Sets the camera view
+		void setView(sf::RenderWindow& window);
 
 	private:
 
