@@ -18,15 +18,20 @@ class TextCache
 
 public:
 
+	// Default constructor.
+	TextCache() { }
+
 	// Uses CreateText to create a text, and if done successfully it saves it in a std::map.
-	static void setupText(const std::string textName, const std::string path);
+	void setupText(const std::string textName, const std::string path);
 	// Returns the text that is bound to the user-given name.
-	static Text& getText(const std::string textName);
+	Text& getText(const std::string textName);
 
 private:
-
-	// Unused Default Constructor.
-	TextCache() { }
+	// Saves and binds a user-given name to the created text.
+	std::map<std::string, Text> _text;
+	
+	// The only instance of CreateText
+	CreateText _createText;
 };
 
 #endif

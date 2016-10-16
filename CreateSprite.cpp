@@ -2,8 +2,7 @@
 // C++ Standard Library
 #include <iostream>
 
-// A map which is used to bind and saves a user-given name to a new texture.
-static std::map< std::string, Texture> _texture;
+
 
 // Creates a sprite and loads in the entire image.
 Sprite CreateSprite::createSprite(const std::string textureName, const std::string texturePath)

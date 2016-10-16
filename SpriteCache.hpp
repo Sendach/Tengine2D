@@ -17,18 +17,23 @@ class SpriteCache
 
 public:
 
+	// Default Constructor.
+	SpriteCache() { }
+
 	// Uses CreateSprite to create a sprite, and if done successfully it saves it in a std::map.
-	static void setupSprite(const std::string spriteName, const std::string path);
+	void setupSprite(const std::string spriteName, const std::string path);
 	// Uses CreateSprite to create a cropped sprite, and if done successfully it saves it in a std::map.
-	static void setupSpriteCI(const std::string spriteName, const std::string path, sf::IntRect cropped);
+	void setupSpriteCI(const std::string spriteName, const std::string path, sf::IntRect cropped);
 	// Returns the sprite that is bound to the user-given name.
-	static Sprite& getSprite(const std::string spriteName);
+	Sprite& getSprite(const std::string spriteName);
 
 private:
 
-	// Unused Default Constructor.
-	SpriteCache() { }
+	// Saves and binds a user-given name to the created text.
+	std::map<std::string, Sprite> _sprite;
 
+	// The only instance of CreateSprite
+	CreateSprite _createSprite;
 };
 
 #endif

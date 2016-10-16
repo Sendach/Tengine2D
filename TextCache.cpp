@@ -3,14 +3,11 @@
 // C++ Standard Library
 #include <iostream>
 
-// Saves and binds a user-given name to the created text.
-static std::map<std::string, Text> _text;
-
 // Uses CreateText to create a text, and if done successfully it saves it in a std::map.
 void TextCache::setupText(const std::string textName, const std::string fontPath)
 {
 	// Saves the created text.
-	Text text = CreateText::createText(textName, fontPath);
+	Text text = _createText.createText(textName, fontPath);
 	// / Iterates through all texts to check if the user-given name for the text is already taken.
 	auto textIterator = _text.find(textName);
 

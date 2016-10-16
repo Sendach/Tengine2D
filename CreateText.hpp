@@ -18,14 +18,19 @@ class CreateText
 
 public:
 
+	// Unused Default Constructor.
+	CreateText() { }
+
 	// Creates a text & font.
-	static Text createText(const std::string textName, const std::string fontPath);
+	Text createText(const std::string textName, const std::string fontPath);
 
 private:
 
-	// Unused Default Constructor.
-	CreateText() {}
 	
+	
+	// // A map which is used to bind and saves a user-given name to a new font.
+	std::map<std::string, t2d::Font> _font;
+
 };
 
 #endif
