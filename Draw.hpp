@@ -17,9 +17,9 @@ class Draw
 public:
 
 	// Draws user-given sprite. Using the Engine defined sprite.
-	static void draw(sf::RenderWindow& window, const Sprite& sprite);
+	static void draw(sf::RenderWindow& window, Sprite& sprite);
 	// Draws user-given text. Using the engine defined Text.
-	static void draw(sf::RenderWindow& window, const Text& text);
+	static void draw(sf::RenderWindow& window, Text& text);
 
 private:
 
