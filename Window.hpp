@@ -41,9 +41,9 @@ namespace t2d {
 		// Creates a window, with an added style, ex. Fullscreen.
 		void create(int screenWidth, int screenHeight, std::string windowName, Window::Style style);
 		// Draws a sprite to the screen.
-		void draw(const Sprite& sprite);
+		void draw(Sprite& sprite);
 		//  Draws a text to the screen
-		void draw(const Text& text);
+		void draw(Text& text);
 		// Clears the screens.
 		void clear();
 		// Clears the screen with user-given color.
@@ -89,11 +89,7 @@ namespace t2d {
 		
 		// Calls function setCamera in Camera.hpp with _window as argument.
 		void setView(t2d::Camera camera);
-		
-
-		
-		
-
+	
 	private:
 	
 		// Width of the screen.

@@ -49,12 +49,12 @@ namespace t2d {
 	}
 
 	// Draw to the screen.
-	void Window::draw(const Sprite& sprite)
+	void Window::draw(Sprite& sprite)
 	{
 		Draw::draw(_window, sprite);
 	}
 
-	void Window::draw(const Text& text)
+	void Window::draw(Text& text)
 	{
 		Draw::draw(_window, text);
 	}
