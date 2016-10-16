@@ -56,6 +56,8 @@ public:
 
 	// Sets the position of the text.
 	Text& setPosition(float x, float y);
+	// Sets the position of text using t2d::Vector2f.
+	Text& setPosition(t2d::Vector2f& position);
 	// Gets the position of the sprite.
 	const t2d::Vector2f& getPosition() const;
 
@@ -76,7 +78,7 @@ public:
 
 	// Sets the rotation of the text. Overwrites previous rotation angle
 	Text& setRotation(float angle);
-	// Gets the rotation of the text. 
+	// Gets the rotation angle of the text. 
 	const float getRotation() const;
 
 	// Sets the scaling for the text using t2d::Vector2f. Overwrites previous scale

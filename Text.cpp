@@ -100,6 +100,16 @@ Text& Text::setPosition(float x, float y)
 	return *this;
 }
 
+// Sets the position of the text using t2d::Vector2f.
+Text& Text::setPosition(t2d::Vector2f& position)
+{
+	_text.setPosition(position.x, position.y);
+	position_x = position.x;
+	position_y = position.y;
+	_position = t2d::Vector2f(position_x, position_y);
+	return *this;
+}
+
 // Gets the position of the sprite.
 const t2d::Vector2f& Text::getPosition() const
 {
