@@ -6,7 +6,6 @@
 // // A map which is used to bind and saves a user-given name to a new font.
 static std::map<std::string, t2d::Font> _font;
 
-
 // Creates a text & font.
 Text CreateText::createText(const std::string textName, const std::string fontPath)
 {

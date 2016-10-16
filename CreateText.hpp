@@ -12,8 +12,6 @@
 #include "Text.hpp"
 #include "Font.hpp"
 
-
-
 // A static class that creates and loads in Text & Font.
 class CreateText
 {
