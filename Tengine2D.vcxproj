@@ -100,7 +100,6 @@
     <ClCompile Include="TextCache.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Time.cpp" />
-    <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="VectorFunctions.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
