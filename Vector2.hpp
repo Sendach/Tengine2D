@@ -36,7 +36,7 @@ namespace t2d {
 	template <class T>
 	std::ostream& operator << (std::ostream& output, const Vector2<T>& item)
 	{
-		output << item.x << " " << item.y;
+		output << "X: " << item.x << " Y: " << item.y;
 		return output;
 	}
 
