@@ -15,35 +15,69 @@ namespace t2d {
 	class Camera
 	{
 	public:
-		Camera() { }
-
-		// Reset camera to a certain view using sf::floatrect.
+		// Default Constructor
+		Camera();
+		// Creates a Camera.
 		Camera(sf::FloatRect rect);
 	
-		// Creates a Camera.
+		// Reset camera to a certain view using sf::floatrect.
 		void reset(sf::FloatRect rect);
-
-		// Zooms in if factor is a value above 1.0f, zooms out if vice versa.
+		// factor values: factor > 1 makes the view bigger, object appear smaller.
+		// factor < 1 makes the view smaller, object appear bigger.
 		void zoom(float factor);
+		// Translates/moves the camera & Updates position of the sprite using float values x and y. Adds to the current position.
+		void translate(float x, float y);
+		// Translates/moves the camera & Updates position of the sprite using t2d::Vector2f. Adds to the current position.
+		void translate(const t2d::Vector2f& factors);
+		// Rotates the camera. Adds to the current angle.
+		void rotate(float angle);
 
 		// Setters & Getters
 
-		// Sets The size of the camera view.
-		void setSize(float width, float height);
-		//  Returns size of the camera view.
-		const t2d::Vector2f& getSize();
-
 		// Sets the camera view
 		void setView(sf::RenderWindow& window);
+
+		// Sets Viewport
+		Camera& setViewport(sf::FloatRect& viewport);
+		// Gets viewport
+		//const t2d::FloatRect getViewport() const;
+
+		// Sets the position of the camera - Camera's position is its center.
+		Camera& setCenter(float x, float y);
+		// Sets the position of the camera - Camera's position is its center. Using t2d::Vector2f 
+		Camera& setCentert(t2d::Vector2f& position);
+		// Gets the position of the camera - the center of it.
+		const t2d::Vector2f& getCenter() const;
+
+		// Sets the rotation of the camera. Overwrites previous rotation angle.
+		Camera& setRotation(float angle);
+		// Gets the rotation angle of the camera.
+		const float getRotation() const;
+
+		// Sets The size of the camera view.
+		void setSize(float width, float height);
+		// Sets The size of the camera view using t2d::Vector2f
+		void setSize(t2d::Vector2f& size);
+		//  Returns size of the camera view.
+		const t2d::Vector2f& getSize() const;
 
 	private:
 
 		// The actual camera
 		sf::View _camera;
+
+		// Position x and y of sprite.
+		t2d::Vector2f center_position;
 		// Width of camera view
 		float _width;
 		// Height of camera view
 		float _height;
+		// Center point x
+		float center_position_x;
+		// Center point y
+		float center_position_y;
+		// Rotation angle
+		float _angle;
 
 	};
 }
