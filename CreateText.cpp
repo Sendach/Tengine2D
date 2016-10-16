@@ -3,15 +3,15 @@
 // C++ Standard Library.
 #include <iostream>
 
+// // A map which is used to bind and saves a user-given name to a new font.
+static std::map<std::string, t2d::Font> _font;
 
-
-// Initialize Static variables
-std::map<std::string, t2d::Font> CreateText::_font;
-Text CreateText::_text;
 
 // Creates a text & font.
-Text& CreateText::createText(const std::string textName, const std::string fontPath)
+Text CreateText::createText(const std::string textName, const std::string fontPath)
 {
+	// Create the text
+	Text _text;
 	// Uses our std::map to bind a user-given name to a new font.
 	_font[textName] = t2d::Font();
 	// Loads the font from the user-given path.
