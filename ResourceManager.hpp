@@ -11,7 +11,7 @@
 
 namespace t2d {
 
-	// A class which The user can use to Create Sprites & texts, as well as to get them.
+	// A singleton class which The user can use to Create Sprites & texts, as well as to get them.
 	class ResourceManager
 	{
 	public:
@@ -31,7 +31,6 @@ namespace t2d {
 
 		// Unused Default Constructor.
 		ResourceManager() {}
-
 	};
 }
 #endif
