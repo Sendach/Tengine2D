@@ -3,6 +3,8 @@
 #define PRINT_CONSOLE_HPP
 
 #include <iostream>
+#include "Vector2.hpp"
+
 namespace t2d {
 
 	// This file contains two functions that makes it possible to print out an infinte amount of arguments.
@@ -14,7 +16,7 @@ namespace t2d {
 	// It takes an unknown number of arguments. And prints one item out at a time.
 
 	template<class First, class... Rest>
-	void Print_Console(First item, const Rest&... rest)
+	void Print_Console(const First item, const Rest&... rest)
 	{
 		std::cout << item;
 
@@ -24,7 +26,7 @@ namespace t2d {
 
 	// When it is time to output the final item, this function is entered. Which does so.
 	template<class First, class... Rest>
-	void Print_Console(First item)
+	void Print_Console(const First item)
 	{
 		std::cout << item;
 	}
