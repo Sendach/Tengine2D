@@ -19,14 +19,26 @@ namespace t2d {
 
 		// Create overload Operator functions so the user can perform math tasks.
 		
-		friend std::ostream& operator << (const Vector2<T>& item, std::ostream& output);
+		template <class T> friend std::ostream& operator << (std::ostream& output, const Vector2<T>& item );
 	
 	private:
-		//std::ostream& os = std::cout;
+		
 		
 	};
 
-	
+	template <class T>
+	Vector2<T>::Vector2(T X, T Y)
+	{
+		x = X;
+		y = Y;
+	}
+
+	template <class T>
+	std::ostream& operator << (std::ostream& output, const Vector2<T>& item)
+	{
+		output << item.x << " " << item.y;
+		return output;
+	}
 
 // Define the most common types
 typedef Vector2<int>	      Vector2i;
