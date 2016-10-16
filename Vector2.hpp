@@ -2,9 +2,11 @@
 #ifndef VECTOR2_HPP
 #define VECTOR2_HPP
 
+#include <iostream>
 
 namespace t2d {
 
+	// A vector 2D template class
 	template <class T>
 	class Vector2
 	{
@@ -12,19 +14,19 @@ namespace t2d {
 		Vector2() { }
 		Vector2(T x, T y);
 		
-		
-
 		T x;
 		T y;
 
+		// Create overload Operator functions so the user can perform math tasks.
+		
+		friend std::ostream& operator << (const Vector2<T>& item, std::ostream& output);
+	
+	private:
+		//std::ostream& os = std::cout;
+		
 	};
 
-	template <class T>
-	Vector2<T>::Vector2(T X, T Y)
-	{
-		x = X;
-		y = Y;
-	}
+	
 
 // Define the most common types
 typedef Vector2<int>	      Vector2i;
