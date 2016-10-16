@@ -39,6 +39,8 @@ public:
 
 	// Sets the position of the sprite.
 	Sprite& setPosition(float x, float y);
+	// Sets the position of sprite using t2d::Vector2f.
+	Sprite& setPosition(t2d::Vector2f& position);
 	// Gets the position of the sprite.
 	const t2d::Vector2f& getPosition() const;
 
@@ -49,7 +51,7 @@ public:
 
 	// Sets the rotation of the sprite. Overwrites previous rotation angle
 	Sprite& setRotation(float angle);
-	// Gets the rotation of the sprite. 
+	// Gets the rotation angle of the sprite. 
 	const float getRotation() const;
 
 	// Sets the scaling for the sprite using t2d::Vector2f. Overwrites previous scale
@@ -66,9 +68,6 @@ private:
 
 	// The actual sprite.
 	sf::Sprite _sprite;
-
-	
-	
 
 	// Position x and y of sprite.
 	t2d::Vector2f _position;

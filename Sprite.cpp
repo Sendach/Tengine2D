@@ -85,6 +85,16 @@ Sprite& Sprite::setPosition(float x, float y)
 	return *this;
 }
 
+// Sets the position of sprite using t2d::Vector2f.
+Sprite& Sprite::setPosition(t2d::Vector2f& position)
+{
+	_sprite.setPosition(position.x, position.y);
+	position_x = position.x;
+	position_y = position.y;
+	_position = t2d::Vector2f(position_x, position_y);
+	return *this;
+}
+
 // Gets the position of the sprite.
 const t2d::Vector2f& Sprite::getPosition() const
 {
