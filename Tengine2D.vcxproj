@@ -117,7 +117,7 @@
     <ClInclude Include="Font.hpp" />
     <ClInclude Include="GameState.hpp" />
     <ClInclude Include="Keyboard.hpp" />
-    <ClInclude Include="Print_Console.hpp" />
+    <ClInclude Include="ConsoleOutput.hpp" />
     <ClInclude Include="ResourceManager.hpp" />
     <ClInclude Include="Sprite.hpp" />
     <ClInclude Include="SpriteCache.hpp" />
