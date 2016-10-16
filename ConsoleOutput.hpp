@@ -1,6 +1,6 @@
 #pragma once
-#ifndef PRINT_CONSOLE_HPP
-#define PRINT_CONSOLE_HPP
+#ifndef CONSOLEOUTPUT_HPP
+#define CONSOLEOUTPUT_HPP
 
 #include <iostream>
 #include "Vector2.hpp"
@@ -16,17 +16,17 @@ namespace t2d {
 	// It takes an unknown number of arguments. And prints one item out at a time.
 
 	template<class First, class... Rest>
-	void Print_Console(const First item, const Rest&... rest)
+	void ConsoleOutput(const First item, const Rest&... rest)
 	{
 		std::cout << item;
 
 		// This function is entered when "rest" is reached, and we want to output the final item.
-		Print_Console(rest...);
+		ConsoleOutput(rest...);
 	}
 
 	// When it is time to output the final item, this function is entered. Which does so.
 	template<class First, class... Rest>
-	void Print_Console(const First item)
+	void ConsoleOutput(const First item)
 	{
 		std::cout << item;
 	}
