@@ -27,11 +27,6 @@ private:
 
 	// Unused Default Constructor.
 	TextCache() { }
-	// Saves and binds a user-given name to the created text.
-	static std::map<std::string, Text> _text;
-	// The text that is created in CreateText is temporarily saved in this variable before placed in the std::map.
-	static Text text;
-
 };
 
 #endif
