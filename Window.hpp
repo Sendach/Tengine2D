@@ -93,15 +93,15 @@ namespace t2d {
 	private:
 	
 		// Width of the screen.
-		int _screenWidth;
+		int m_ScreenWidth;
 		// Height of the screen.
-		int _screenHeight;
+		int m_ScreenHeight;
 		// Name of the window.
-		std::string _windowName;
+		std::string m_Title;
 		// window Style.
-		Style _style;
+		Style m_Style;
 		// The Window.
-		sf::RenderWindow _window;
+		sf::RenderWindow m_Window;
 
 	};
 }

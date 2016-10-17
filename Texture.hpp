@@ -24,12 +24,13 @@ public:
 	bool load(const std::string texturePath);
 
 	// The actual Texture
-	sf::Texture _texture;
+	sf::Texture m_Texture;
+
 private:
 	// Size in width.
-	float x;
+	float m_SizeX;
 	// Size in height.
-	float y;
+	float m_SizeY;
 };
 
 #endif

@@ -30,10 +30,10 @@ public:
 private:
 
 	// Saves and binds a user-given name to the created text.
-	std::map<std::string, Sprite> _sprite;
+	std::map<std::string, Sprite> m_Sprites;
 
 	// The only instance of CreateSprite
-	CreateSprite _createSprite;
+	CreateSprite m_CreateSprite;
 };
 
 #endif

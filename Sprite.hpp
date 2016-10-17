@@ -63,6 +63,7 @@ public:
 
 	// Draw Class calls this function, which draws the sprite.
 	void draw(sf::RenderWindow& window, Sprite& sprite);
+
 	Sprite& getsprite();
 private:
 
@@ -70,23 +71,23 @@ private:
 	sf::Sprite _sprite;
 
 	// Position x and y of sprite.
-	t2d::Vector2f _position;
+	t2d::Vector2f m_Position;
 	// Scale of the sprite
-	t2d::Vector2f _scale;
+	t2d::Vector2f m_Scale;
 	// Position in x.
-	float position_x;
+	float m_PositionX;
 	// Position in y.
-	float position_y;
+	float m_PositionY;
 	// Scale in x
-	float scale_x;
+	float m_ScaleX;
 	// Scale in y
-	float scale_y;
+	float m_ScaleY;
 	// Rotation angle of the sprite.
-	float _angle;
+	float m_Angle;
 	// Width of sprite.
-	float _width;
+	float m_Width;
 	// Height of sprite.
-	float _height;
+	float m_Height;
 
 };
 

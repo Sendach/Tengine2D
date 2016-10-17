@@ -4,22 +4,22 @@
 // Default Constructor sets position of sprite at (0, 0).
 Sprite::Sprite()
 {
-	position_x = 0.0f;
-	position_y = 0.0f;
-	_position = t2d::Vector2f(position_x, position_y);
+	m_PositionX = 0.0f;
+	m_PositionY = 0.0f;
+	m_Position = t2d::Vector2f(m_PositionX, m_PositionY);
 
-	scale_x = 1.0f;
-	scale_y = 1.0f;
-	_scale = t2d::Vector2f(scale_x, scale_y);
+	m_ScaleX = 1.0f;
+	m_ScaleY = 1.0f;
+	m_Scale = t2d::Vector2f(m_ScaleX, m_ScaleY);
 
-	_angle = 0.0f;
+	m_Angle = 0.0f;
 }
 
 // Rotates the sprite. Adds to the current angle.
 Sprite& Sprite::rotate(float angle)
 {
 	_sprite.rotate(angle);
-	_angle += angle;
+	m_Angle += angle;
 	return *this;
 }
 
@@ -27,9 +27,9 @@ Sprite& Sprite::rotate(float angle)
 Sprite& Sprite::scale(float x, float y)
 {
 	_sprite.scale(x, y);
-	scale_x *= x;
-	scale_y *= y;
-	_scale = t2d::Vector2f(scale_x, scale_y);
+	m_ScaleX *= x;
+	m_ScaleY *= y;
+	m_Scale = t2d::Vector2f(m_ScaleX, m_ScaleY);
 	return *this;
 }
 
@@ -37,9 +37,9 @@ Sprite& Sprite::scale(float x, float y)
 Sprite& Sprite::scale(const t2d::Vector2f& factors)
 {
 	_sprite.scale(factors.x, factors.y); 
-	scale_x *= factors.x;
-	scale_y *= factors.y;
-	_scale = t2d::Vector2f(scale_x, scale_y);
+	m_ScaleX *= factors.x;
+	m_ScaleY *= factors.y;
+	m_Scale = t2d::Vector2f(m_ScaleX, m_ScaleY);
 	return *this;
 }
 
@@ -47,9 +47,9 @@ Sprite& Sprite::scale(const t2d::Vector2f& factors)
 Sprite& Sprite::translate(float x, float y)
 {
 	_sprite.move(x, y);
-	position_x += x;
-	position_y += x;
-	_position = t2d::Vector2f(position_x, position_y);
+	m_PositionX += x;
+	m_PositionY += x;
+	m_Position = t2d::Vector2f(m_PositionX, m_PositionY);
 	return *this;
 }
 
@@ -57,16 +57,16 @@ Sprite& Sprite::translate(float x, float y)
 Sprite& Sprite::translate(const t2d::Vector2f& factors)
 {
 	_sprite.move(factors.x, factors.y);
-	position_x += factors.x;
-	position_y += factors.y;
-	_position = t2d::Vector2f(position_x, position_y);
+	m_PositionX += factors.x;
+	m_PositionY += factors.y;
+	m_Position = t2d::Vector2f(m_PositionX, m_PositionY);
 	return *this;
 }
 
 // Applies texture on sprite.
 void Sprite::setTexture(Texture& texture)
 {
-	_sprite.setTexture(texture._texture);
+	_sprite.setTexture(texture.m_Texture);
 }
 
 // Gets the texture that belongs to this sprite. */Havent figured out how to do it yet */
@@ -79,9 +79,9 @@ void Sprite::setTexture(Texture& texture)
 Sprite& Sprite::setPosition(float x, float y)
 {
 	_sprite.setPosition(x, y);
-	position_x = x;
-	position_y = y;
-	_position = t2d::Vector2f(position_x, position_y);
+	m_PositionX = x;
+	m_PositionY = y;
+	m_Position = t2d::Vector2f(m_PositionX, m_PositionY);
 	return *this;
 }
 
@@ -89,16 +89,16 @@ Sprite& Sprite::setPosition(float x, float y)
 Sprite& Sprite::setPosition(t2d::Vector2f& position)
 {
 	_sprite.setPosition(position.x, position.y);
-	position_x = position.x;
-	position_y = position.y;
-	_position = t2d::Vector2f(position_x, position_y);
+	m_PositionX = position.x;
+	m_PositionY = position.y;
+	m_Position = t2d::Vector2f(m_PositionX, m_PositionY);
 	return *this;
 }
 
 // Gets the position of the sprite.
 const t2d::Vector2f& Sprite::getPosition() const
 {
-	return _position;
+	return m_Position;
 }
 
 // Sets the color of the sprite.
@@ -118,23 +118,23 @@ const t2d::Color Sprite::getColor() const
 Sprite& Sprite::setRotation(float angle)
 {
 	_sprite.setRotation(angle);
-	_angle = angle;
+	m_Angle = angle;
 	return *this;
 }
 
 // Gets the rotation of the sprite.
 const float Sprite::getRotation() const
 {
-	return _angle;
+	return m_Angle;
 }
 
 // Sets the scaling for the sprite using t2d::Vector2f. Overwrites previous scale
 Sprite& Sprite::setScale(const t2d::Vector2f& factors)
 {
 	_sprite.setScale(factors.x, factors.y);
-	scale_x = factors.x;
-	scale_y = factors.y;
-	_scale = t2d::Vector2f(scale_x, scale_y);
+	m_ScaleX = factors.x;
+	m_ScaleY = factors.y;
+	m_Scale = t2d::Vector2f(m_ScaleX, m_ScaleY);
 	return *this;
 }
 
@@ -147,16 +147,16 @@ Sprite& Sprite::getsprite()
 Sprite& Sprite::setScale(float x_factor, float y_factor)
 {
 	_sprite.setScale(x_factor, y_factor);
-	scale_x = x_factor;
-	scale_y = y_factor;
-	_scale = t2d::Vector2f(scale_x, scale_y);
+	m_ScaleX = x_factor;
+	m_ScaleY = y_factor;
+	m_Scale = t2d::Vector2f(m_ScaleX, m_ScaleY);
 	return *this;
 }
 
 // Gets the scaling of the sprite.
 const t2d::Vector2f& Sprite::getScale() const
 {
-	return _scale;
+	return m_Scale;
 }
 
 // Draw Class calls this function, which draws the sprite.

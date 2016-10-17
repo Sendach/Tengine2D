@@ -29,7 +29,7 @@ private:
 	
 	
 	// // A map which is used to bind and saves a user-given name to a new font.
-	std::map<std::string, t2d::Font> _font;
+	std::map<std::string, t2d::Font> m_Font;
 
 };
 

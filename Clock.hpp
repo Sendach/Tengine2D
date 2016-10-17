@@ -25,7 +25,7 @@ namespace t2d {
 	private:
 		
 		// The Clock.
-		sf::Clock _clock;
+		sf::Clock m_Clock;
 	};
 }
 #endif

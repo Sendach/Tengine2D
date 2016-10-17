@@ -8,81 +8,81 @@ namespace t2d {
 	// Default constructor
 	Camera::Camera()
 	{
-		center_position_x = 0.0,
-		center_position_y = 0.0f;
-		_width = 1000.0f;
-		_height = 1000.0f;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		mm_PositionX = 0.0,
+		mm_PositionY = 0.0f;
+		m_Width = 1000.0f;
+		m_Height = 1000.0f;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 
-		_camera.reset(sf::FloatRect(center_position_x, center_position_y, _width, _height));
+		m_Camera.reset(sf::FloatRect(mm_PositionX, mm_PositionY, m_Width, m_Height));
 
-		_angle = 0.0f;
+		m_Angle = 0.0f;
 	}
 
 	// Reset camera to a certain view using sf::floatrect.
 	Camera::Camera(sf::FloatRect rect)
 	{
-		center_position_x = rect.left;
-		center_position_y = rect.top;
-		_width = rect.width;
-		_height = rect.height;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		mm_PositionX = rect.left;
+		mm_PositionY = rect.top;
+		m_Width = rect.width;
+		m_Height = rect.height;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 
-		_camera.reset(rect);
+		m_Camera.reset(rect);
 
-		_angle = 0.0f;
+		m_Angle = 0.0f;
 	}
 
 	// Reset camera to a certain view using sf::floatrect.
 	void Camera::reset(sf::FloatRect rect)
 	{
-		center_position_x = rect.left;
-		center_position_y = rect.top;
-		_width = rect.width;
-		_height = rect.height;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		mm_PositionX = rect.left;
+		mm_PositionY = rect.top;
+		m_Width = rect.width;
+		m_Height = rect.height;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 
-		_camera.reset(rect);
-		_camera.setRotation(0.0f);
+		m_Camera.reset(rect);
+		m_Camera.setRotation(0.0f);
 	}
 
 	// factor values: factor > 1 makes the view bigger, object appear smaller.
 	// factor < 1 makes the view smaller, object appear bigger.
 	void Camera::zoom(float factor)
 	{
-		_camera.zoom(factor);
+		m_Camera.zoom(factor);
 		
 	}
 
 	// Translates/moves the camera & Updates position of the sprite using float values x and y. Adds to the current position.
 	void Camera::translate(float x, float y)
 	{
-		_camera.move(x, y);
-		center_position_x += x;
-		center_position_y += y;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		m_Camera.move(x, y);
+		mm_PositionX += x;
+		mm_PositionY += y;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 	}
 
 	// Translates/moves the camera & Updates position of the sprite using t2d::Vector2f. Adds to the current position.
 	void Camera::translate(const t2d::Vector2f& factors)
 	{
-		_camera.move(factors.x, factors.y);
-		center_position_x += factors.x;
-		center_position_y += factors.y;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		m_Camera.move(factors.x, factors.y);
+		mm_PositionX += factors.x;
+		mm_PositionY += factors.y;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 	}
 
 	// Rotates the camera. Adds to the current angle.
 	void Camera::rotate(float angle)
 	{
-		_camera.rotate(angle);
-		_angle += angle;
+		m_Camera.rotate(angle);
+		m_Angle += angle;
 	}
 
 	// Sets the camera view
 	void Camera::setView(sf::RenderWindow& window)
 	{
-		window.setView(_camera);
+		window.setView(m_Camera);
 	}
 
 	// Sets Viewport
@@ -94,63 +94,63 @@ namespace t2d {
 	// Sets the position of the camera - Camera's position is its center.
 	Camera& Camera::setCenter(float x, float y)
 	{
-		_camera.setCenter(x, y);
-		center_position_x = x;
-		center_position_y = y;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		m_Camera.setCenter(x, y);
+		mm_PositionX = x;
+		mm_PositionY = y;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 		return *this;
 	}
 
 	// Sets the position of the camera - Camera's position is its center. Using t2d::Vector2f 
 	Camera& Camera::setCentert(t2d::Vector2f& position)
 	{
-		_camera.setCenter(position.x, position.y);
-		center_position_x = position.x;
-		center_position_y = position.y;
-		center_position = t2d::Vector2f(center_position_x, center_position_y);
+		m_Camera.setCenter(position.x, position.y);
+		mm_PositionX = position.x;
+		mm_PositionY = position.y;
+		centerm_Position = t2d::Vector2f(mm_PositionX, mm_PositionY);
 		return *this;
 	}
 
 	// Gets the position of the camera - the center of it.
 	const t2d::Vector2f& Camera::getCenter() const
 	{
-		return center_position;
+		return centerm_Position;
 	}
 
 	// Sets the rotation of the camera. Overwrites previous rotation angle.
 	Camera& Camera::setRotation(float angle)
 	{
-		_camera.setRotation(angle);
-		_angle = angle;
+		m_Camera.setRotation(angle);
+		m_Angle = angle;
 		return *this;
 	}
 
 	// Gets the rotation angle of the camera.
 	const float Camera::getRotation() const
 	{
-		return _angle;
+		return m_Angle;
 	}
 
 	// Sets The size of the camera view.
 	void Camera::setSize(float width, float height)
 	{
-		_camera.setSize(width, height);
-		_width = width;
-		_height = height;
+		m_Camera.setSize(width, height);
+		m_Width = width;
+		m_Height = height;
 	}
 
 	// Sets The size of the camera view using t2d::Vector2f
 	void Camera::setSize(t2d::Vector2f& size)
 	{
-		_camera.setSize(size.x, size.y);
-		_width = size.x;
-		_height = size.y;
+		m_Camera.setSize(size.x, size.y);
+		m_Width = size.x;
+		m_Height = size.y;
 	}
 
 	// Returns size of the camera view.
 	const t2d::Vector2f& Camera::getSize() const
 	{
-		return t2d::Vector2f(_camera.getSize().x, _camera.getSize().y);
+		return t2d::Vector2f(m_Camera.getSize().x, m_Camera.getSize().y);
 	}
 }
 

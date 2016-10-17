@@ -42,7 +42,7 @@ class Event
 public:
 
 	// Event
-	static sf::Event _event;
+	static sf::Event m_Event;
 
 private:
 	// Unused Default Constructor

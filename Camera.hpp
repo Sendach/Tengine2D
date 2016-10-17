@@ -64,20 +64,20 @@ namespace t2d {
 	private:
 
 		// The actual camera
-		sf::View _camera;
+		sf::View m_Camera;
 
 		// Position x and y of sprite.
-		t2d::Vector2f center_position;
+		t2d::Vector2f centerm_Position;
 		// Width of camera view
-		float _width;
+		float m_Width;
 		// Height of camera view
-		float _height;
+		float m_Height;
 		// Center point x
-		float center_position_x;
+		float mm_PositionX;
 		// Center point y
-		float center_position_y;
+		float mm_PositionY;
 		// Rotation angle
-		float _angle;
+		float m_Angle;
 
 	};
 }

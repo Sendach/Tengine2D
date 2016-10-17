@@ -2,176 +2,169 @@
 
 namespace t2d {
 
-// Initialize Static variables.
-//sf::RenderWindow Window::_window;
-//int Window::_screenWidth;
-//int Window::_screenHeight;
-//std::string Window::_windowName;
-//Window::Style Window::_style;
-
 	// Constructor that creates a window.
 	Window::Window(int screenWidth, int screenHeight, std::string windowName)
 	{
-		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName);
-		_screenWidth = screenWidth;
-		_screenHeight = screenHeight;
-		_windowName = windowName;
+		m_Window.create(sf::VideoMode(screenWidth, screenHeight), windowName);
+		m_ScreenWidth = screenWidth;
+		m_ScreenHeight = screenHeight;
+		m_Title = windowName;
 	}
 
 	// Constructor that creates a window.
 	Window::Window(int screenWidth, int screenHeight, std::string windowName, Window::Style style)
 	{
-		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName, style);
+		m_Window.create(sf::VideoMode(screenWidth, screenHeight), windowName, style);
 
-		_screenWidth = screenWidth;
-		_screenHeight = screenHeight;
-		_windowName = windowName;
+		m_ScreenWidth = screenWidth;
+		m_ScreenHeight = screenHeight;
+		m_Title = windowName;
 	}
 
 	// Creates a window.
 	void Window::create(int screenWidth, int screenHeight, std::string windowName)
 	{
-		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName);
+		m_Window.create(sf::VideoMode(screenWidth, screenHeight), windowName);
 
-		_screenWidth = screenWidth;
-		_screenHeight = screenHeight;
-		_windowName = windowName;
+		m_ScreenWidth = screenWidth;
+		m_ScreenHeight = screenHeight;
+		m_Title = windowName;
 	}
 
 	// Creates a window, with an added style, ex. Fullscreen.
 	void Window::create(int screenWidth, int screenHeight, std::string windowName, Window::Style style)
 	{
-		_window.create(sf::VideoMode(screenWidth, screenHeight), windowName, style);
+		m_Window.create(sf::VideoMode(screenWidth, screenHeight), windowName, style);
 
-		_screenWidth = screenWidth;
-		_screenHeight = screenHeight;
-		_windowName = windowName;
+		m_ScreenWidth = screenWidth;
+		m_ScreenHeight = screenHeight;
+		m_Title = windowName;
 	}
 
 	// Draw to the screen.
 	void Window::draw(Sprite& sprite)
 	{
-		Draw::draw(_window, sprite);
+		Draw::draw(m_Window, sprite);
 	}
 
 	void Window::draw(Text& text)
 	{
-		Draw::draw(_window, text);
+		Draw::draw(m_Window, text);
 	}
 
 	// Clears the screen.
 	void Window::clear()
 	{
-		_window.clear();
+		m_Window.clear();
 	}
 	
 	// Clears the screen with user-given color.
 	void Window::clear(t2d::Color colour)
 	{
-		_window.clear(sf::Color(colour._r, colour._g, colour._b, colour._a));
+		m_Window.clear(sf::Color(colour.m_R, colour.m_G, colour.m_B, colour.m_A));
 	}
 
 	/// Displays everything on the screen.
 	void Window::display()
 	{
-		_window.display();
+		m_Window.display();
 	}
 	
 	// Closes The Screen
 	void Window::close()
 	{
-		_window.close();
+		m_Window.close();
 	}
 	
 	// Pops the event on top of the event queue, if any, and returns it.
 	bool Window::pollEvent()
 	{
-		return _window.pollEvent(Event::_event);
+		return m_Window.pollEvent(Event::m_Event);
 	}
 
 	// Gets the window
 	//t2d::Window& Window::getWindow()
 	//{
-	//	//return _window;
+	//	//return m_Window;
 	//}
 
 	// Set screen width.
 	void Window::setScreenWidth(int screenWidth)
 	{
-		_window.setSize(sf::Vector2u(screenWidth, _screenHeight));
-		_screenWidth = screenWidth;
+		m_Window.setSize(sf::Vector2u(screenWidth, m_ScreenHeight));
+		m_ScreenWidth = screenWidth;
 	}
 
 	// Get screen width.
 	int Window::getScreenWidth()
 	{
-		return _screenWidth;
+		return m_ScreenWidth;
 	}
 
 	// Set screen height.
 	void Window::setScreenHeight(int screenHeight)
 	{
-		_window.setSize(sf::Vector2u(_screenWidth, screenHeight));
-		_screenHeight = screenHeight;
+		m_Window.setSize(sf::Vector2u(m_ScreenWidth, screenHeight));
+		m_ScreenHeight = screenHeight;
 	}
 
 	// Get screen Height.
 	int Window::getScreenHeight()
 	{
-		return _screenHeight;
+		return m_ScreenHeight;
 	}
 
 	// Set name of window.
 	void Window::setWindowName(std::string windowName)
 	{
-		_window.setTitle(windowName);
-		_windowName = windowName;
+		m_Window.setTitle(windowName);
+		m_Title = windowName;
 	}
 
 	// Get name of window.
 	std::string Window::getWindowName()
 	{
-		return _windowName;
+		return m_Title;
 	}
 	
 	// Set window style.
 	void Window::setWindowStyle(Style style)
 	{
 		/* Currently No official way to change the style */
-		_style = style;
+		m_Style = style;
 	}
 
 	// Get window style.
 	Window::Style Window::getWindowStyle()
 	{
-		return _style;
+		return m_Style;
 	}
 
 	// Set window Size
 	void Window::setSize(int screenWidth, int screenHeight)
 	{
-		_window.setSize(sf::Vector2u(screenWidth, screenHeight));
-		_screenWidth = screenWidth;
-		_screenHeight = screenHeight;;
+		m_Window.setSize(sf::Vector2u(screenWidth, screenHeight));
+		m_ScreenWidth = screenWidth;
+		m_ScreenHeight = screenHeight;;
 	}
 
 	// Set Window Size, using Vector2f
 	void Window::setSize(t2d::Vector2u size)
 	{
-		_window.setSize(sf::Vector2u(size.x, size.y));
-		_screenWidth = size.x;
-		_screenHeight = size.y;
+		m_Window.setSize(sf::Vector2u(size.x, size.y));
+		m_ScreenWidth = size.x;
+		m_ScreenHeight = size.y;
 	}
 
 	// Get window size - Return Vector2f
 	t2d::Vector2u& Window::getSize()
 	{
-		return t2d::Vector2u(_screenWidth, _screenHeight);
+		return t2d::Vector2u(m_ScreenWidth, m_ScreenHeight);
 	}
 
 	// Sets the camera view
 	void Window::setView(t2d::Camera camera)
 	{
-		camera.setView(_window);
+		camera.setView(m_Window);
 	}
 }

@@ -11,16 +11,16 @@ Sprite CreateSprite::createSprite(const std::string textureName, const std::stri
 	Sprite _sprite;
 
 	// Uses our std::map to bind a user-given name to a new texture.
-	_texture[textureName] = Texture();
+	m_Texture[textureName] = Texture();
 	// Loads in the image/sprite from the user-given path.
-	if (!_texture[textureName].load(texturePath))
+	if (!m_Texture[textureName].load(texturePath))
 	{
 		// Image failed to load.
 		std::cout << "Error Loading Image From Path: " << texturePath << std::endl;
 	}
 	else
 	{	// Image was successfully loaded.
-		_sprite.setTexture(_texture[textureName]);
+		_sprite.setTexture(m_Texture[textureName]);
 	}
 
 	// Return the sf::Sprite variable that this image was set to.
@@ -38,16 +38,16 @@ Sprite CreateSprite::createSpriteCI(const std::string textureName, std::string t
 	Sprite _sprite;
 
 	// Uses our std::map to bind a user-given name to a new texture.
-	_texture[textureName] = Texture();
+	m_Texture[textureName] = Texture();
 	// Loads in the image/sprite with a from the user-given path. Cropping the image using sf::IntRect 
-	if (!_texture[textureName].load(texturePath))
+	if (!m_Texture[textureName].load(texturePath))
 	{
 		// Image failed to load.
 		std::cout << "Error Loading (Cropped)Image From Path: " << texturePath << std::endl;
 	}
 	else
 	{	// Image was successfully loaded.
-		_sprite.setTexture(_texture[textureName]);
+		_sprite.setTexture(m_Texture[textureName]);
 	}
 
 	// Return the sf::Sprite variable that this image was set to.

@@ -29,13 +29,13 @@ namespace t2d {
 		static const sf::Color& getColor(t2d::Color color);
 		
 		// Red component
-		uint8_t _r;
+		uint8_t m_R;
 		// Green component
-		uint8_t _g;
+		uint8_t m_G;
 		// Blue component
-		uint8_t _b;
+		uint8_t m_B;
 		// Alpha component
-		uint8_t _a;
+		uint8_t m_A;
 
 		// All of the colors the user can use.
 		static const Color Black;       

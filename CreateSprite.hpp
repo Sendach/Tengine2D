@@ -30,7 +30,7 @@ public:
 private:
 
 	// A map which is used to bind and saves a user-given name to a new texture.
-	std::map< std::string, Texture> _texture;
+	std::map< std::string, Texture> m_Texture;
 };
 
 #endif

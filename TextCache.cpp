@@ -7,15 +7,15 @@
 void TextCache::setupText(const std::string textName, const std::string fontPath)
 {
 	// Saves the created text.
-	Text text = _createText.createText(textName, fontPath);
+	Text text = m_CreateText.createText(textName, fontPath);
 	// / Iterates through all texts to check if the user-given name for the text is already taken.
-	auto textIterator = _text.find(textName);
+	auto textIterator = m_Text.find(textName);
 
 	// If the user-given name for the text does not previously exist. We Create it
-	if (textIterator == _text.end())
+	if (textIterator == m_Text.end())
 	{
 		// Successfully binded the user-given name to the text.
-		_text.insert(make_pair(textName, text));
+		m_Text.insert(make_pair(textName, text));
 	}
 	else
 	{	// User-given name for the text already exists.
@@ -27,6 +27,6 @@ void TextCache::setupText(const std::string textName, const std::string fontPath
 Text& TextCache::getText(const std::string textName)
 {
 	// Returns the text bound to the user-given name.
-	return _text[textName];
+	return m_Text[textName];
 }
 

@@ -23,7 +23,7 @@ namespace t2d {
 		bool load(const std::string fontPath);
 
 		// The actual font
-		sf::Font _font;
+		sf::Font m_Font;
 
 	};
 }

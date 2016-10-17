@@ -4,7 +4,7 @@
 
 
 // Initialize static members
-sf::Event Event::_event;
+sf::Event Event::m_Event;
 	
 
 

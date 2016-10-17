@@ -9,16 +9,16 @@ Text CreateText::createText(const std::string textName, const std::string fontPa
 	// Create the text
 	Text _text;
 	// Uses our std::map to bind a user-given name to a new font.
-	_font[textName] = t2d::Font();
+	m_Font[textName] = t2d::Font();
 	// Loads the font from the user-given path.
-	if (!_font[textName].load(fontPath))
+	if (!m_Font[textName].load(fontPath))
 	{
 		// Font failed to load.
 		std::cout << "Error Loading Font from Path: " << fontPath << std::endl;
 	}
 	else
 	{	// Font was successfully loaded.
-		_text.setFont(_font[textName]);
+		_text.setFont(m_Font[textName]);
 	}
 
 	// Return the sf::Text variable that this font is set to.

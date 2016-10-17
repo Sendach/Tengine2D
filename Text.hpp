@@ -97,27 +97,27 @@ private:
 	sf::Text _text;
 
 	// Position x and y of text.
-	t2d::Vector2f _position;
+	t2d::Vector2f m_Position;
 	// Scale of the text
-	t2d::Vector2f _scale;
+	t2d::Vector2f m_Scale;
 	// Position in x.
-	float position_x;
+	float m_PositionX;
 	// Position in y.
-	float position_y;
+	float m_PositionY;
 	// Scale in x
-	float scale_x;
+	float m_ScaleX;
 	// Scale in y
-	float scale_y;
+	float m_ScaleY;
 	// Rotation angle of the sprite.
-	float _angle;
+	float m_Angle;
 	// Width of text.
 	float _width;
 	// Height of text.
 	float _height;
 	// String containing the text
-	std::string _string;
+	std::string m_String;
 	// Character size
-	unsigned int char_size;
+	unsigned int m_CharSize;
 	
 	
 };

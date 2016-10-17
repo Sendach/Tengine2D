@@ -28,10 +28,10 @@ public:
 
 private:
 	// Saves and binds a user-given name to the created text.
-	std::map<std::string, Text> _text;
+	std::map<std::string, Text> m_Text;
 	
 	// The only instance of CreateText
-	CreateText _createText;
+	CreateText m_CreateText;
 };
 
 #endif

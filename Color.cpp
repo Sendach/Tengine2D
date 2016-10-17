@@ -19,25 +19,25 @@ const Color Color::Transparent(sf::Color::Transparent);
 	// Constructor used to define Colors using the pre-defined sf::Colors
 	Color::Color(const sf::Color color)
 	{
-		_r = color.r;
-		_g = color.g;
-		_b = color.b;
-		_a = color.a;
+		m_R = color.r;
+		m_G = color.g;
+		m_B = color.b;
+		m_A = color.a;
 	}
 
 	// Constructor which takes in color values for rgba.
 	Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
 	{
-		_r = r;
-		_g = g;
-		_b = b;
-		_a = a;
+		m_R = r;
+		m_G = g;
+		m_B = b;
+		m_A = a;
 	}
 
 	// Overloaded== operator used to compare user-given color, using The Engine's Color class. To pre-defined sf::colors.
 	bool operator== (const t2d::Color& color, const sf::Color& sfcolor)
 	{
-		if (color._r == sfcolor.r && color._g == sfcolor.g && color._b == sfcolor.b && color._a == sfcolor.a)
+		if (color.m_R == sfcolor.r && color.m_G == sfcolor.g && color.m_B == sfcolor.b && color.m_A == sfcolor.a)
 		{
 			return true;
 		}

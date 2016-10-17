@@ -11,9 +11,9 @@ namespace t2d {
 	// Returns true if key was pressed once.
 	bool Keyboard::keyPressed(Key key)
 	{
-		if (Event::_event.type == Events::KeyPressed)
+		if (Event::m_Event.type == Events::KeyPressed)
 		{
-			if (Event::_event.key.code == key)
+			if (Event::m_Event.key.code == key)
 			{
 				return true;
 			}
