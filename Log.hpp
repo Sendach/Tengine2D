@@ -11,22 +11,35 @@ namespace t2d {
 	//  Varidic template class or function (In this case functions) that supports an 
 	// The ... operator (ellipsis) mean that there are an unknown number amount of arguments following.
 
+	class Log {
+		
+	public:
+
+		// Recursive Function.
+		// It takes an unknown number of arguments. And prints one item out at a time.
+		template <class First, class... Rest>
+		Log(const First item, const Rest&... rest);
+
+		// When it is time to output the final item, this function is entered. Which does so.
+		template <class First, class... Rest>
+		Log(const First item);
+		
+	};
 
 	// Recursive Function.
 	// It takes an unknown number of arguments. And prints one item out at a time.
 
 	template<class First, class... Rest>
-	void ConsoleOutput(const First item, const Rest&... rest)
+	Log::Log(const First item, const Rest&... rest)
 	{
 		std::cout << item;
 
-		// This function is entered when "rest" is reached, and we want to output the final item.
-		ConsoleOutput(rest...);
+		Log(rest...);
 	}
 
 	// When it is time to output the final item, this function is entered. Which does so.
 	template<class First, class... Rest>
-	void ConsoleOutput(const First item)
+	Log::Log(const First item)
 	{
 		std::cout << item;
 	}
