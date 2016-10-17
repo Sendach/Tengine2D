@@ -8,7 +8,7 @@ class GameObject;
 class Component
 {
 public:
-	virtual	void update(GameObject& gameObject) = 0;
+	virtual	void update(const GameObject& gameObject) = 0;
 
 };
 

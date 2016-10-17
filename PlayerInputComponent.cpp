@@ -2,7 +2,7 @@
 #include "Keyboard.hpp"
 #include "ResourceManager.hpp"
 
-void PlayerInputComponent::update(GameObject& player)
+void PlayerInputComponent::update(const GameObject& player)
 {
 	if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::D))
 	{

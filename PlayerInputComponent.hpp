@@ -6,8 +6,8 @@ class PlayerInputComponent : public InputComponent
 {
 public:
 	PlayerInputComponent() { }
-	virtual void update(GameObject& gameObject);
-
+	virtual void update(const GameObject& gameObject);
+	
 private:
 
 };

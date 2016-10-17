@@ -3,6 +3,7 @@
 #include "Component.hpp"
 #include <memory>
 
+
 void Scene::createGameObject()
 {
 	std::shared_ptr<GameObject> result = std::make_shared<GameObject>();
