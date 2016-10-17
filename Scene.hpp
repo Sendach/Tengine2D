@@ -7,8 +7,8 @@
 #include <memory>
 
 // Engine Classes
-#include "GameObject.hpp"
 
+extern class GameObject;
 // This class Basically represents a level in a game.
 // It holds all the game objects in the game. 
 
@@ -29,8 +29,9 @@ public:
 	// Creates a game object
 	void createGameObject();
 
-	// Vector that holds all of the objects in the game
-	std::vector<std::shared_ptr<GameObject>> m_GameObjects;
+	std::shared_ptr<GameObject>& findObject(std::string);
+
+	
 	
 };
 #endif

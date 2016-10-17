@@ -12,7 +12,7 @@
 
 #include "PlayerInputComponent.hpp"
 
-
+#include "Scene.hpp"
 
 // Base Game Object class that we can use for every object int he game.
 // The class contains a vector of Components, which the user can use to add components such as InputComponent, or PhysicsComponent.
@@ -23,8 +23,9 @@
 class GameObject
 {
 public:
+	GameObject() { }
 	// Called when Object is created using createGameObject() in the Scene class.
-	GameObject();
+	GameObject(std::string name, std::string tag);
 
 	///////// Functions //////////
 
@@ -36,12 +37,17 @@ public:
 	// Allows user to remove components of their GameObject
 	void removeComponent(std::shared_ptr<Component> component);
 
+	void addedToScene(Scene* newScene);
 	///////// Variables //////////
 
 	// Name of the object.
 	std::string m_ObjectName;
 	// Objects Tag (Type of object), e.g Background, Player, Enemy.
 	std::string m_ObjectTag;
+	// We hold a reference to the scene so the game objects can query the scene information,
+	// such as determining if the player is visible to an enemy etc.
+	Scene* m_Scene;
+	
 
 private:
 	// Holds all of the components, e.g InputComponent, PhysicsComponent, RenderComponent.
