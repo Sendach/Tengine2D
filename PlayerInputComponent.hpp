@@ -4,18 +4,22 @@
 
 // Engine Classes
 #include "InputComponent.hpp"
-#include "GameObject.hpp"
+class GameObject;
 
 // C++ Standard Library
 #include <string>
 #include <memory>
 
+
 class PlayerInputComponent : public InputComponent
 {
 public:
 
-	// Default constructor - Initializes info
+	// Default constructor
 	PlayerInputComponent();
+
+	// Default constructor - Initializes info
+
 
 	// Updates Component
 	virtual void update(const GameObject& gameObject, float delta);
@@ -30,7 +34,7 @@ private:
 
 	// Name of the component
 	std::string name;
-	// velocity of the Player
-	float velocity;
+
+
 };
 #endif
