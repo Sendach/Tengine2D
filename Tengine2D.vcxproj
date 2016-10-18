@@ -95,6 +95,7 @@
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="GraphicsComponent.cpp" />
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="PlayerInputComponent.cpp" />
@@ -126,6 +127,7 @@
     <ClInclude Include="Font.hpp" />
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="GameState.hpp" />
+    <ClInclude Include="GraphicsComponent.hpp" />
     <ClInclude Include="InputComponent.hpp" />
     <ClInclude Include="Keyboard.hpp" />
     <ClInclude Include="Log.hpp" />
