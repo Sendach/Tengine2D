@@ -64,7 +64,9 @@ public:
 	// Draw Class calls this function, which draws the sprite.
 	void draw(sf::RenderWindow& window, Sprite& sprite);
 
+	// Returns sprite
 	Sprite& getsprite();
+
 private:
 
 	// The actual sprite.

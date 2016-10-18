@@ -13,6 +13,7 @@
 
 namespace t2d {
 
+	// Different text styles.
 	enum  TextStyle {
 		Regular = 0,
 		Bold = 1 << 0,
@@ -27,9 +28,6 @@ public:
 	// Default Constructor sets position of text to (0, 0)
 	Text();
 
-	// Different text styles.
-	
-
 	// Rotates the text.  Adds to the current angle.
 	Text& rotate(float angle);
 	// Scales the text. using float values x and y. Multiplies the currect scale of the object.
@@ -40,7 +38,6 @@ public:
 	Text& translate(float x, float y);
 	// Translates/moves the text & Updates position of the sprite using t2d::Vector2f. Adds to the current position.
 	Text& translate(const t2d::Vector2f& factors);
-
 
 	// Settings & Getters
 

@@ -138,11 +138,6 @@ Sprite& Sprite::setScale(const t2d::Vector2f& factors)
 	return *this;
 }
 
-Sprite& Sprite::getsprite()
-{
-	return *this;
-}
-
 // Sets the scaling for the sprite using two float values for x and y. Overwrites previous scale
 Sprite& Sprite::setScale(float x_factor, float y_factor)
 {
@@ -163,4 +158,9 @@ const t2d::Vector2f& Sprite::getScale() const
 void Sprite::draw(sf::RenderWindow& window, Sprite& sprite)
 {
 	window.draw(sprite._sprite);
+}
+
+Sprite& Sprite::getsprite()
+{
+	return *this;
 }
