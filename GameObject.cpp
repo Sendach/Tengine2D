@@ -19,7 +19,7 @@ GameObject::GameObject()
 	m_Scene = nullptr;
 	m_Active = true;
 	m_EnableRender = true;
-
+	
 	// Initializing Default Components
 	m_SpriteRenderer = std::make_shared<SpriteRendererComponent>();
 	m_Components.push_back(m_SpriteRenderer);
@@ -63,7 +63,8 @@ void GameObject::render(t2d::Window& window)
 	{
 		if (m_EnableRender)
 		{
-			window.draw(m_Scene->getSprite(m_SpriteRenderer->m_SpriteName));
+			//window.draw(m_Scene->getSprite(m_SpriteRenderer->m_SpriteName));
+			m_SpriteRenderer->draw(window);
 		}
 	}
 }
