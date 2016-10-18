@@ -27,6 +27,7 @@ void SpriteCache::setupSpriteCI(const std::string spriteName, const std::string 
 {
 	// Saves the created sprite.
 	Sprite sprite = m_CreateSprite.createSpriteCI(spriteName, path, cropped);
+
 	// / Iterates through all sprites to check if the user-given name for the sprite is already taken.
 	auto spriteIterator = m_Sprites.find(spriteName);
 
@@ -48,3 +49,7 @@ Sprite& SpriteCache::getSprite(std::string spriteName)
 	return m_Sprites[spriteName];
 }
 
+std::map<std::string, Sprite>& SpriteCache::getCache() 
+{
+	return m_Sprites;
+}

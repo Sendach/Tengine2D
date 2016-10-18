@@ -25,7 +25,9 @@ public:
 	// Uses CreateSprite to create a cropped sprite, and if done successfully it saves it in a std::map.
 	void setupSpriteCI(const std::string spriteName, const std::string path, sf::IntRect cropped);
 	// Returns the sprite that is bound to the user-given name.
-	Sprite& getSprite(const std::string spriteName);
+	 Sprite& getSprite(const std::string spriteName);
+
+	std::map<std::string, Sprite>& getCache();
 
 private:
 
