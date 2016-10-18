@@ -25,7 +25,7 @@ class GameObject
 public:
 	GameObject();
 	// Called when Object is created using createGameObject() in the Scene class.
-	GameObject(std::string name, std::string tag);
+	GameObject(std::string name = "", std::string tag = "Untagged", std::string layer = "Default");
 
 	///////// Functions //////////
 
@@ -38,12 +38,29 @@ public:
 	void removeComponent(std::shared_ptr<Component> component);
 
 	void addedToScene(Scene* newScene);
-	///////// Variables //////////
 
-	// Name of the object.
-	std::string m_ObjectName;
-	// Objects Tag (Type of object), e.g Background, Player, Enemy.
-	std::string m_ObjectTag;
+
+	///////// Setters & Getters /////////
+
+	// Sets the object name
+	void setName(std::string newName);
+	// Gets the object name
+	const std::string getName() const;
+
+	// Sets the object tag
+	void setTag(std::string newTag);
+	// Gets the object Tag
+	const std::string getTag() const;
+
+	// Sets the object layer
+	void setLayer(std::string newLayer);
+	// Gets the object layer
+	const std::string getLayer() const;
+
+	///////// Variables /////////
+
+	
+
 	// We hold a reference to the scene so the game objects can query the scene information,
 	// such as determining if the player is visible to an enemy etc.
 	Scene* m_Scene;
@@ -53,7 +70,17 @@ private:
 	// Holds all of the components, e.g InputComponent, PhysicsComponent, RenderComponent.
 	std::vector<std::shared_ptr<Component>> m_Components;
 
+	// Name of the object.
+	std::string m_Name;
 
+	// Objects Tag (Type of object), e.g Background, Player, Enemy.
+	// Markers values that can be used to identify objects in your project.
+	std::string m_Tag;
+
+	// Layers are used throughout the engine as a way to create groups of objects that share
+	// particular characteristics. Layers are primarily used to restrict operations such as collision
+	// so they are only applied to the groups of objects that are relevant.
+	std::string m_Layer;
 };
 
 #endif

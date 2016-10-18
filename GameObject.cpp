@@ -5,19 +5,21 @@
 #include <iostream>
 
 #include "Scene.hpp"
+
 GameObject::GameObject()
 {
-	m_ObjectName = " ";
-	m_ObjectTag = " ";
-	m_Scene = new Scene();
+	m_Name = " ";
+	m_Tag = "Untagged";
+	m_Layer = "Default";
+	m_Scene = nullptr;
 }
 
 // Called when Object is created using createGameObject() in the Scene class.
-GameObject::GameObject(std::string name, std::string tag)
+GameObject::GameObject(std::string name, std::string tag, std::string layer)
 {
-	m_ObjectName = name;
-	m_ObjectTag = tag;
-	m_Scene = new Scene();
+	m_Name = name;
+	m_Tag = tag;
+	m_Scene = nullptr;
 }
 
 // Updates Everything. All components. A gameobjects input, rendering, physics etc.
@@ -45,4 +47,41 @@ void GameObject::removeComponent(std::shared_ptr<Component> component)
 void GameObject::addedToScene(Scene* newScene)
 {
 	this->m_Scene = newScene;
+}
+
+
+// Sets the object name
+void GameObject::setName(std::string newName)
+{
+	this->m_Name = newName;
+}
+
+// Gets the object name
+const std::string GameObject::getName() const
+{
+	return m_Name;
+}
+
+// Sets the object tag
+void GameObject::setTag(std::string newTag)
+{
+	this->m_Tag = newTag;
+}
+
+// Gets the object Tag
+const std::string GameObject::getTag() const
+{
+	return m_Tag;
+}
+
+// Sets the object layer
+void GameObject::setLayer(std::string newLayer)
+{
+	this->m_Layer = newLayer;
+}
+
+// Gets the object layer
+const std::string GameObject::getLayer() const
+{
+	return m_Layer;
 }
