@@ -9,6 +9,7 @@
 // Engine Classes
 
 extern class GameObject;
+
 // This class Basically represents a level in a game.
 // It holds all the game objects in the game. 
 
@@ -31,6 +32,8 @@ public:
 
 	std::shared_ptr<GameObject>& findObject(std::string);
 
+	// Vector that holds all of the objects in the game
+	std::vector<std::shared_ptr<GameObject>> m_GameObjects;
 	
 	
 };

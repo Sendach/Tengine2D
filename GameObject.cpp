@@ -4,14 +4,20 @@
 #include <algorithm>
 #include <iostream>
 
-
+#include "Scene.hpp"
+GameObject::GameObject()
+{
+	m_ObjectName = " ";
+	m_ObjectTag = " ";
+	m_Scene = new Scene();
+}
 
 // Called when Object is created using createGameObject() in the Scene class.
 GameObject::GameObject(std::string name, std::string tag)
 {
 	m_ObjectName = name;
 	m_ObjectTag = tag;
-	
+	m_Scene = new Scene();
 }
 
 // Updates Everything. All components. A gameobjects input, rendering, physics etc.

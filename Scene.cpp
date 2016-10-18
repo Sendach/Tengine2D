@@ -2,16 +2,16 @@
 
 #include "Component.hpp"
 #include <memory>
-
+#include <iostream>
 #include "GameObject.hpp"
-// Vector that holds all of the objects in the game
-std::vector<std::shared_ptr<GameObject>> m_GameObjects;
+
+
 
 void Scene::createGameObject()
 {
 	std::shared_ptr<GameObject> result = std::make_shared<GameObject>("Player", "Player");
-	m_GameObjects.push_back(result);
 	result->addedToScene(this);
+	m_GameObjects.push_back(result);
 	
 }
 

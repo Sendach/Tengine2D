@@ -23,7 +23,7 @@
 class GameObject
 {
 public:
-	GameObject() { }
+	GameObject();
 	// Called when Object is created using createGameObject() in the Scene class.
 	GameObject(std::string name, std::string tag);
 
