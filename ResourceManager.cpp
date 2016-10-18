@@ -38,4 +38,10 @@ static TextCache m_TextCache;
 	{
 		return m_TextCache.getText(textName);
 	}
+
+	std::map<std::string, Sprite>& ResourceManager::getSpriteCache()
+	{
+		return m_SpriteCache.getCache();
+	}
 }
+

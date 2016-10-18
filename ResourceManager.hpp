@@ -27,6 +27,10 @@ namespace t2d {
 		// Creates a text using TextCache.h & CreateText.h
 		static Text& createText(const std::string textName, const std::string fontPath);
 
+		//////// Setters & Getters ////////
+
+		static	std::map<std::string, Sprite>& getSpriteCache();
+
 	private:
 
 		// Unused Default Constructor.
