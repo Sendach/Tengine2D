@@ -8,9 +8,13 @@
 #include <memory>
 
 // Engine Classes
+/* Components */
 #include "Component.hpp"
 #include "PlayerInputComponent.hpp"
 #include "SpriteRendererComponent.hpp"
+#include "TransformComponent.hpp"
+
+/* Others */
 #include "Scene.hpp"
 #include "Sprite.hpp"
 
@@ -20,7 +24,7 @@
 // It Is capable of removing and adding objects.
 // A GameObject has a name and a tag. 
 
-class GameObject
+class GameObject 
 {
 public:
 	GameObject();
@@ -79,14 +83,17 @@ public:
 	// We hold a reference to the scene so the game objects can query the scene information,
 	// such as determining if the player is visible to an enemy etc.
 	Scene* m_Scene;
-	Sprite m_Sprite;
+	
+	//holds information about the game object's position, orientation, and size. 
+	//Other game objects, such the renderer will read and write the values stored in the transform. 
+	std::shared_ptr<TransformComponent> transform;
+
+	
+
 private:
 
 	// All objects have a sprite renderer by default. It renders the sprite.
-	std::shared_ptr<SpriteRendererComponent> m_SpriteRenderer;
-
-	// All objects have a transform by default. It holds the position, rotation and scale of a sprite.
-////	//std::shared_ptr<TransformComponent> m_Transform;
+	std::shared_ptr<SpriteRendererComponent> SpriteRenderer;
 
 	// Holds all ofthe components, e.g InputComponent, PhysicsComponent, RenderComponent.
 	std::vector<std::shared_ptr<Component>> m_Components;
@@ -113,9 +120,6 @@ private:
 
 	// Whether or not a GameObject is active (turned on or off)
 	bool m_Active;
-
-	
-	
 };
 
 #endif

@@ -21,8 +21,11 @@ GameObject::GameObject()
 	m_EnableRender = true;
 	
 	// Initializing Default Components
-	m_SpriteRenderer = std::make_shared<SpriteRendererComponent>();
-	m_Components.push_back(m_SpriteRenderer);
+	transform = std::make_shared<TransformComponent>(this);
+	m_Components.push_back(transform);
+	SpriteRenderer = std::make_shared<SpriteRendererComponent>();
+	m_Components.push_back(SpriteRenderer);
+	
 
 	// Initialize the rest of the components, which the player can add.
 	initializeAllComponents();
@@ -40,9 +43,11 @@ GameObject::GameObject(std::string path, std::string name, std::string tag, std:
 	m_EnableRender = true;
 
 	// Initializing Default Components
-	m_SpriteRenderer = std::make_shared<SpriteRendererComponent>(path, name);
-	m_Components.push_back(m_SpriteRenderer);
-
+	transform = std::make_shared<TransformComponent>(this);
+	m_Components.push_back(transform);
+	SpriteRenderer = std::make_shared<SpriteRendererComponent>(path, name);
+	m_Components.push_back(SpriteRenderer);
+	
 	// Initialize the rest of the components, which the player can add.
 	initializeAllComponents();
 }
@@ -64,7 +69,7 @@ void GameObject::render(t2d::Window& window)
 		if (m_EnableRender)
 		{
 			//window.draw(m_Scene->getSprite(m_SpriteRenderer->m_SpriteName));
-			m_SpriteRenderer->draw(window);
+			SpriteRenderer->draw(window);
 		}
 	}
 }
@@ -74,7 +79,8 @@ void GameObject::render(t2d::Window& window)
 void GameObject::initializeAllComponents()
 {
 	all_components.push_back(std::make_shared<PlayerInputComponent>());
-	all_components.push_back(m_SpriteRenderer);
+	all_components.push_back(SpriteRenderer);
+	all_components.push_back(transform);
 
 }
 
@@ -171,3 +177,4 @@ const bool GameObject::getActive() const
 {
 	return m_Active;
 }
+
