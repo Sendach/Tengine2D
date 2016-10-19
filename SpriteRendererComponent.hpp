@@ -5,7 +5,6 @@
 // Engine Classes
 #include "Sprite.hpp"
 #include "GraphicsComponent.hpp"
-#include "Window.hpp"
 
 // C++ Standard Library
 #include <string>
@@ -21,7 +20,9 @@ public:
 	
 	virtual const std::string getName() const;
 	
-	void draw(t2d::Window& window);
+	virtual void draw(t2d::Window& window);
+
+private:
 	// The sprite the component renders
 	Sprite m_Sprite;
 	
