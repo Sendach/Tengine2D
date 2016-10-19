@@ -14,7 +14,9 @@ namespace t2d {
 	class Keyboard
 	{
 	public:
-		
+
+		Keyboard() {}
+
 		// All of the keys.
 		enum  Key {
 			Unknown = -1, A = 0, B, C,
@@ -44,13 +46,16 @@ namespace t2d {
 			F11, F12, F13, F14,
 			F15, Pause, KeyCount
 		};
-
 		// Returns true if the key is being pressed.
-		 static bool isKeyPressed(Key key);
-		 // Returns true if key was pressed once.
-		 static bool keyPressed(Key key);
+		static bool isKeyPressed(Key key);
+		// Returns true if key was pressed once.
+		static bool keyPressed(Key key);
+		
+		// Returns Instance of the enum Key, which holds all keys.
+		static const t2d::Keyboard getKeyboard();
+
 	private:
-		Keyboard() {}
+		
 	};
 }
 #endif

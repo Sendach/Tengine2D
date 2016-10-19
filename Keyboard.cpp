@@ -20,4 +20,11 @@ namespace t2d {
 		}
 		return false;
 	}
+
+	// Returns Keyboard instance
+	const t2d::Keyboard Keyboard::getKeyboard()
+	{
+		return t2d::Keyboard();
+
+	}
 }
