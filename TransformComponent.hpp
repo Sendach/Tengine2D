@@ -32,15 +32,35 @@ public:
 	virtual const std::string TransformComponent::getName() const;
 
 	// Moves the sprite
-	void Translate(t2d::Vector2f position);
-	// Position of GameObject
-	t2d::Vector2f position;
-	// Rotation angle of the player
-	float rotation;
-	// float size
-	t2d::Vector2f size;
+	void Translate(t2d::Vector2f& position);
+
+	// Setters & Getters //
+
+	// Sets the position
+	void setPosition(t2d::Vector2f& position);
+	// Gets the position
+	const t2d::Vector2f& getPosition() const;
+
+	// Sets rotation
+	void setRotation(float angle);
+	// Gets rotation
+	const float getRotation() const;
+
+	// Sets size
+	void setSize(t2d::Vector2f& size);
+	// Gets size
+	const t2d::Vector2f& getSize() const;
 
 private:
+	///////// Variables ///////
+
+	// Position of GameObject
+	t2d::Vector2f m_Position;
+	// Rotation angle of the player
+	float m_Rotation;
+	// float size
+	t2d::Vector2f m_Size;
+	
 	// Name of the component
 	std::string name;
 	// Copy of GameObject
