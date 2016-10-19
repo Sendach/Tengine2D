@@ -83,6 +83,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Axes.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
@@ -96,7 +97,9 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GraphicsComponent.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputComponent.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="PlayerInputComponent.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
@@ -116,6 +119,7 @@
     <Text Include="Tengine2DReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Axes.hpp" />
     <ClInclude Include="BoxCollider.hpp" />
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Clock.hpp" />
@@ -129,7 +133,9 @@
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="GameState.hpp" />
     <ClInclude Include="GraphicsComponent.hpp" />
+    <ClInclude Include="Input.hpp" />
     <ClInclude Include="InputComponent.hpp" />
+    <ClInclude Include="InputManager.hpp" />
     <ClInclude Include="Keyboard.hpp" />
     <ClInclude Include="Log.hpp" />
     <ClInclude Include="PlayerInputComponent.hpp" />

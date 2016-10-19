@@ -117,6 +117,15 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files\Others</Filter>
     </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Axes.cpp">
+      <Filter>Source Files\Others</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Tengine2DReadMe.txt" />
@@ -210,6 +219,15 @@
       <Filter>Header Files\Others</Filter>
     </ClInclude>
     <ClInclude Include="Window.hpp">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.hpp">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <Filter>Header Files\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Axes.hpp">
       <Filter>Header Files\Others</Filter>
     </ClInclude>
   </ItemGroup>
