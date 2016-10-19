@@ -20,12 +20,6 @@ public:
 
 	// Returns the name of the component
 	virtual const std::string getName() const = 0;
-
-	// Returns the amount of components that we have
-	const int getAmountOfComponent() const;
-
-	// Holds the amount of components taht we have
-	int amount_of_components = 0;
 };
 
 #endif
