@@ -14,12 +14,14 @@ BoxColliderComponent::BoxColliderComponent(GameObject* gameObject, std::shared_p
 	m_IsTrigger = false;
 	
 	m_Size = transform->getSize();
+	
 }
 
 // Updates component
 void BoxColliderComponent::update(const GameObject& gameObject, float delta)
 {
-
+	m_Size = m_Transform->getSize();
+	m_Box = m_Transform->getSprite().getGlobalBounds();
 }
 
 // Returns the component
@@ -33,3 +35,4 @@ const std::string BoxColliderComponent::getName() const
 {
 	return m_Name;
 }
+

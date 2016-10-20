@@ -18,6 +18,7 @@ public:
 
 	BoxColliderComponent(GameObject* gameObject, std::shared_ptr<TransformComponent> transform);
 
+//	bool colliding()
 	// Updates component
 	virtual void update(const GameObject& gameObject, float delta);
 	
@@ -51,7 +52,8 @@ private:
 	// The transform attached to this GameObject
 	std::shared_ptr<TransformComponent> m_Transform;
 
-
+	// The box around the sprite. I have to create my own FloatRect class!!!
+	sf::FloatRect m_Box;
 
 };
 
