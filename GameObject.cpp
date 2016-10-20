@@ -81,6 +81,7 @@ void GameObject::initializeAllComponents()
 	all_components.push_back(std::make_shared<PlayerInputComponent>());
 	all_components.push_back(SpriteRenderer);
 	all_components.push_back(transform);
+	all_components.push_back(std::make_shared<BoxColliderComponent>(this, transform));
 
 }
 

@@ -13,6 +13,7 @@
 #include "PlayerInputComponent.hpp"
 #include "SpriteRendererComponent.hpp"
 #include "TransformComponent.hpp"
+#include "BoxColliderComponent.hpp"
 
 /* Others */
 #include "Scene.hpp"
@@ -88,7 +89,6 @@ public:
 	//Other game objects, such the renderer will read and write the values stored in the transform. 
 	std::shared_ptr<TransformComponent> transform;
 
-	
 
 private:
 
