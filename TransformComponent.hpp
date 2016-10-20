@@ -31,9 +31,10 @@ public:
 	// Returns the amount of components that we have
 	virtual const std::string TransformComponent::getName() const;
 
-	// Moves the sprite
+	// Moves the sprite - Using t2d::Vector
 	void Translate(t2d::Vector2f& position);
-
+	// Moves the sprite - Using float values
+	void TransformComponent::Translate(float x, float y);
 	// Setters & Getters //
 
 	// Sets the position

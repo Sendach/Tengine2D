@@ -23,10 +23,16 @@ void TransformComponent::update(const GameObject& player, float delta)
 	m_Size = t2d::ResourceManager::getSprite(player.getName()).getScale();
 }
 
-// Translates sprite attached to the GameObject
+// Translates sprite attached to the GameObject - using t2d::Vector
 void TransformComponent::Translate(t2d::Vector2f& position)
 {
 	t2d::ResourceManager::getSprite(m_GameObject->getName()).translate(position);
+}
+
+// Translates sprite attached to the GameObject - using float values
+void TransformComponent::Translate(float x, float y)
+{
+	t2d::ResourceManager::getSprite(m_GameObject->getName()).translate(t2d::Vector2f(x, y));
 }
 
 // Sets the position
