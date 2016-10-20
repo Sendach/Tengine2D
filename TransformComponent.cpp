@@ -2,7 +2,7 @@
 
 // Engine Classes
 #include "GameObject.hpp"
-
+#include "ResourceManager.hpp"
 TransformComponent::TransformComponent()
 {
 	name = "Transform";
@@ -81,6 +81,11 @@ const t2d::Vector2f& TransformComponent::getScale() const
 const t2d::Vector2f& TransformComponent::getSize() const
 {
 	return m_Size;
+}
+
+Sprite& TransformComponent::getSprite()
+{
+	return t2d::ResourceManager::getSprite(m_GameObject->getName());
 }
 
 // Returns the component

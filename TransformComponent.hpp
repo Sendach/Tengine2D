@@ -5,7 +5,7 @@
 // Engine Classes
 #include "Component.hpp"
 #include "Vector2.hpp"
-
+#include "Sprite.hpp"
 // Forward Declarations
 class GameObject;
 
@@ -56,6 +56,8 @@ public:
 
 	// Gets size in width and height
 	const t2d::Vector2f& getSize() const;
+
+	Sprite& getSprite();
 
 private:
 	///////// Variables ///////
