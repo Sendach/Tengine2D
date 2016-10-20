@@ -3,6 +3,8 @@
 // Forward declared in Scene.hpp. Now we include it in the .cpp.
 #include "GameObject.hpp"
 
+
+std::vector<std::shared_ptr<GameObject>> Scene::m_GameObjects;
 // Creates a game object. Returns it.
 std::shared_ptr<GameObject> Scene::createGameObject(std::string path, std::string name, std::string tag, std::string layer)
 {
@@ -31,6 +33,7 @@ void Scene::update(float delta)
 	{
 		i->update(delta);
 	}
+	
 }
 
 // Draw the entire scene on the screen.

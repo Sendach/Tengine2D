@@ -11,8 +11,11 @@
 #include "ResourceManager.hpp"
 #include "Window.hpp"
 #include "Input.hpp"
+
+
 // Forward Declaration
 extern class GameObject;
+
 
 // This class Basically represents a level in a game.
 // It holds all the game objects in the game. 
@@ -20,7 +23,7 @@ extern class GameObject;
 class Scene
 {
 public:
-	Scene() { }
+	Scene() {  }
 	
 	///////////// Functions ///////////////
 
@@ -50,11 +53,10 @@ public:
 	// Returns a vector of active GameObjects with user-given tag. 
 	std::vector<std::shared_ptr<GameObject>>& findGameObjectsWithTag(std::string tag);
 
-
 	///////////// Variables ///////////////
 
 	// Vector that holds all of the objects in the Scene
-	std::vector<std::shared_ptr<GameObject>> m_GameObjects;
+	static std::vector<std::shared_ptr<GameObject>> m_GameObjects;
 
 	// Vector that holds all the sprites in the scene
 	Sprite& createSprite(const const std::string textureName, const std::string spritePath);
