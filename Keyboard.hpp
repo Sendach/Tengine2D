@@ -50,7 +50,7 @@ namespace t2d {
 		static bool isKeyPressed(Key key);
 		// Returns true if key was pressed once.
 		static bool keyPressed(Key key);
-		
+	
 		// Returns Instance of the enum Key, which holds all keys.
 		static const t2d::Keyboard getKeyboard();
 

@@ -7,7 +7,7 @@ namespace t2d {
 	{
 		return sf::Keyboard::isKeyPressed((sf::Keyboard::Key)key);
 	}
-
+	
 	// Returns true if key was pressed once.
 	bool Keyboard::keyPressed(Key key)
 	{
