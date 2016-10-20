@@ -17,13 +17,15 @@ namespace t2d {
 		T x;
 		T y;
 
-		// Create overload Operator functions so the user can perform math tasks.
-		
+		// Overload Operators //
+
+		// Overloading << So user can print out the entire vector
 		template <class T> friend std::ostream& operator << (std::ostream& output, const Vector2<T>& item );
-	
-	private:
 		
-		
+		// Overloading * So user can multiply a scalar value, such as int, or float, with the vector.
+		friend t2d::Vector2<T> operator* (const Vector2<T>& left, T right);
+		// Overloading * So user can multiply a scalar value, such as int, or float, with the vector.
+		friend t2d::Vector2<T> operator* (T left, const Vector2<T>& right);
 	};
 
 	template <class T>
@@ -33,11 +35,27 @@ namespace t2d {
 		y = Y;
 	}
 
+	// Overloading << So we can print out the entire vector
 	template <class T>
 	std::ostream& operator << (std::ostream& output, const Vector2<T>& item)
 	{
 		output << "X: " << item.x << " Y: " << item.y;
 		return output;
+	}
+
+	template <class T>
+	// Overloading * So user can multiply a scalar value, such as int, or float, with the vector.
+	t2d::Vector2<T> operator* (const Vector2<T>& left, T right)
+	{
+		return t2d::Vector2f(left.x * right, left.y * right);
+	}
+
+	// Overloading * So user can multiply a scalar value, such as int, or float, with the vector.
+	template <class T>
+	t2d::Vector2<T> operator* (T left, const Vector2<T>& right)
+	{
+		sf::Vector2 x;
+		return t2d::Vector2f(right.x * left, right.y * left);
 	}
 
 // Define the most common types
