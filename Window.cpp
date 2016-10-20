@@ -9,6 +9,8 @@ namespace t2d {
 		m_ScreenWidth = screenWidth;
 		m_ScreenHeight = screenHeight;
 		m_Title = windowName;
+
+		m_Window.setKeyRepeatEnabled(false);
 	}
 
 	// Constructor that creates a window.
@@ -19,6 +21,8 @@ namespace t2d {
 		m_ScreenWidth = screenWidth;
 		m_ScreenHeight = screenHeight;
 		m_Title = windowName;
+
+		m_Window.setKeyRepeatEnabled(false);
 	}
 
 	// Creates a window.
@@ -29,6 +33,8 @@ namespace t2d {
 		m_ScreenWidth = screenWidth;
 		m_ScreenHeight = screenHeight;
 		m_Title = windowName;
+
+		m_Window.setKeyRepeatEnabled(false);
 	}
 
 	// Creates a window, with an added style, ex. Fullscreen.
@@ -39,6 +45,8 @@ namespace t2d {
 		m_ScreenWidth = screenWidth;
 		m_ScreenHeight = screenHeight;
 		m_Title = windowName;
+
+		m_Window.setKeyRepeatEnabled(false);
 	}
 
 	// Draw to the screen.
@@ -166,5 +174,10 @@ namespace t2d {
 	void Window::setView(t2d::Camera camera)
 	{
 		camera.setView(m_Window);
+	}
+
+	void Window::setKeyRepeatEnabled(bool enable)
+	{
+		m_Window.setKeyRepeatEnabled(enable);
 	}
 }

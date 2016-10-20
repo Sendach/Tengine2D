@@ -89,7 +89,8 @@ namespace t2d {
 		
 		// Calls function setCamera in Camera.hpp with _window as argument.
 		void setView(t2d::Camera camera);
-	
+		
+		void setKeyRepeatEnabled(bool enable);
 	private:
 	
 		// Width of the screen.
