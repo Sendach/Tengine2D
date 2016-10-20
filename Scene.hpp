@@ -10,6 +10,7 @@
 // Engine Classes
 #include "ResourceManager.hpp"
 #include "Window.hpp"
+#include "Input.hpp"
 // Forward Declaration
 extern class GameObject;
 
@@ -48,9 +49,6 @@ public:
 
 	// Returns a vector of active GameObjects with user-given tag. 
 	std::vector<std::shared_ptr<GameObject>>& findGameObjectsWithTag(std::string tag);
-
-
-
 
 
 	///////////// Variables ///////////////
