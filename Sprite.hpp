@@ -70,6 +70,8 @@ public:
 	// Returns sprite
 	Sprite& getsprite();
 
+	sf::FloatRect& getGlobalBounds();
+
 private:
 
 	// The actual sprite.

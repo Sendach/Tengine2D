@@ -173,3 +173,8 @@ const t2d::Vector2f& Sprite::getSize() const
 {
 	return t2d::Vector2f(_sprite.getGlobalBounds().width, _sprite.getGlobalBounds().height);
 }
+
+sf::FloatRect& Sprite::getGlobalBounds()
+{
+	return _sprite.getGlobalBounds();
+}
