@@ -13,6 +13,9 @@ Sprite::Sprite()
 	m_Scale = t2d::Vector2f(m_ScaleX, m_ScaleY);
 
 	m_Angle = 0.0f;
+
+	m_Width = _sprite.getGlobalBounds().width;
+	m_Height = _sprite.getGlobalBounds().height;
 }
 
 // Rotates the sprite. Adds to the current angle.
@@ -163,4 +166,10 @@ void Sprite::draw(sf::RenderWindow& window, Sprite& sprite)
 Sprite& Sprite::getsprite()
 {
 	return *this;
+}
+
+// Gets size of sprite, in width and height.
+const t2d::Vector2f& Sprite::getSize() const
+{
+	return t2d::Vector2f(_sprite.getGlobalBounds().width, _sprite.getGlobalBounds().height);
 }

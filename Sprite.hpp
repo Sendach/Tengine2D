@@ -61,6 +61,9 @@ public:
 	// Gets the scaling of the sprite.
 	const t2d::Vector2f& getScale() const;
 
+	// Gets size of sprite, in width and height.
+	const t2d::Vector2f& getSize() const;
+
 	// Draw Class calls this function, which draws the sprite.
 	void draw(sf::RenderWindow& window, Sprite& sprite);
 
@@ -76,6 +79,9 @@ private:
 	t2d::Vector2f m_Position;
 	// Scale of the sprite
 	t2d::Vector2f m_Scale;
+	// Size of the sprite
+	t2d::Vector2f m_Size;
+
 	// Position in x.
 	float m_PositionX;
 	// Position in y.
