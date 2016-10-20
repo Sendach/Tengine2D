@@ -20,7 +20,8 @@ void TransformComponent::update(const GameObject& player, float delta)
 {
 	m_Position = t2d::ResourceManager::getSprite(player.getName()).getPosition();
 	m_Rotation = t2d::ResourceManager::getSprite(player.getName()).getRotation();
-	m_Size = t2d::ResourceManager::getSprite(player.getName()).getScale();
+	m_Scale = t2d::ResourceManager::getSprite(player.getName()).getScale();
+	m_Size = t2d::ResourceManager::getSprite(player.getName()).getSize();
 }
 
 // Translates sprite attached to the GameObject - using t2d::Vector
@@ -59,13 +60,24 @@ const float TransformComponent::getRotation() const
 	return m_Rotation;
 }
 
-// Sets size
-void TransformComponent::setSize(t2d::Vector2f& size)
+// Sets the scale - using vector
+void TransformComponent::setScale(t2d::Vector2f& size)
 {
 	t2d::ResourceManager::getSprite(m_GameObject->getName()).setScale(size);
 }
 
+// Sets size - Using float values
+void TransformComponent::setScale(float x, float y)
+{
+	t2d::ResourceManager::getSprite(m_GameObject->getName()).setScale(t2d::Vector2f(x,y));
+}
+
 // Gets size
+const t2d::Vector2f& TransformComponent::getScale() const
+{
+	return m_Scale;
+}
+
 const t2d::Vector2f& TransformComponent::getSize() const
 {
 	return m_Size;

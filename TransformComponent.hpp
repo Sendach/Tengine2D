@@ -47,9 +47,14 @@ public:
 	// Gets rotation
 	const float getRotation() const;
 
-	// Sets size
-	void setSize(t2d::Vector2f& size);
+	// Sets the scale of the sprite - using vector
+	void setScale(t2d::Vector2f& size);
+	// Sets the scale of the sprite - using float x and y
+	void setScale(float x, float y);
 	// Gets size
+	const t2d::Vector2f& getScale() const;
+
+	// Gets size in width and height
 	const t2d::Vector2f& getSize() const;
 
 private:
@@ -59,9 +64,11 @@ private:
 	t2d::Vector2f m_Position;
 	// Rotation angle of the player
 	float m_Rotation;
-	// float size
+	// Scale of the sprite
+	t2d::Vector2f m_Scale;
+	// Size of the sprite in width and height
 	t2d::Vector2f m_Size;
-	
+
 	// Name of the component
 	std::string name;
 	// Copy of GameObject
