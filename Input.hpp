@@ -4,14 +4,18 @@
 
 // Engine Classes
 #include "Keyboard.hpp"
+#include "InputManager.hpp"
 
 // C++ Standard Library
 #include <string>
+#include <memory>
 
 // This class handles all the input.
 class Input
 {
 public:
+	Input() { }
+
 	// Returns t2d::Keyboard, so the player can get a hold of all the keys.
 	static const t2d::Keyboard keyCode();
 
@@ -22,7 +26,10 @@ public:
 	static const bool getKeyDown(const t2d::Keyboard::Key key = t2d::Keyboard::Key::Unknown, const std::string keyName = "");
 
 	// Returns the value of the virtual axis identified by axisName.
-	static const bool GetAxis(const std::string axisName);
+	static const float GetAxisValue(const std::string axisName);
+
+	// Returns instance of the virtual axis identified by axisName. So the user can change the buttons etc.
+	static Axes& getAxis(const std::string axisName);
 
 	// Returns true while the virtual button identified by buttonName is held down.
 	static const bool GetButton(const std::string buttonName);
@@ -35,8 +42,7 @@ public:
 
 	
 private:
-	Input() { }
-
+	static std::shared_ptr<InputManager> m_InputManager;
 };
 
 #endif
