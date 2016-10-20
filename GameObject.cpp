@@ -179,3 +179,13 @@ const bool GameObject::getActive() const
 	return m_Active;
 }
 
+std::shared_ptr<Component>& GameObject::getComponent(std::string componentName)
+{
+	for (auto& i : all_components)
+	{
+		if (i->getName() == componentName)
+		{
+			return i;
+		}
+	}
+}

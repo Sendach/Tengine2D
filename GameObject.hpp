@@ -89,7 +89,7 @@ public:
 	//Other game objects, such the renderer will read and write the values stored in the transform. 
 	std::shared_ptr<TransformComponent> transform;
 
-
+	std::shared_ptr<Component>& getComponent(std::string componentName);
 private:
 
 	// All objects have a sprite renderer by default. It renders the sprite.
