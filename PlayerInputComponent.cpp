@@ -9,32 +9,28 @@
 PlayerInputComponent::PlayerInputComponent()
 {
 	name = "PlayerInput";
-	amount_of_components++;
-	
-	
 }
 
 // Updates Component
 void PlayerInputComponent::update(const GameObject& player, float delta)
 {
-	if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::D))
-	{
-		//t2d::ResourceManager::getSprite(player.getName()).setPosition(m_Transform->m_Position);
-	}
-	if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::A))
-	{
-		
-		t2d::ResourceManager::getSprite(player.getName()).translate(-400 * delta, 0.0f);
+	//if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::D))
+	//{
+	//	//t2d::ResourceManager::getSprite(player.getName()).setPosition(m_Transform->m_Position);
+	//}
+	//if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::A))
+	//{
+	//	t2d::ResourceManager::getSprite(player.getName()).translate(-400 * delta, 0.0f);
+	//}
 
-	}
-	if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::S))
-	{
-		t2d::ResourceManager::getSprite(player.getName()).translate(0.0f, 400 * delta);
-	}
-	if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::W))
-	{
-		t2d::ResourceManager::getSprite(player.getName()).translate(0.0f, -400 * delta);
-	}
+	//if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::S))
+	//{
+	//	t2d::ResourceManager::getSprite(player.getName()).translate(0.0f, 400 * delta);
+	//}
+	//if (t2d::Keyboard::isKeyPressed(t2d::Keyboard::W))
+	//{
+	//	t2d::ResourceManager::getSprite(player.getName()).translate(0.0f, -400 * delta);
+	//}
 }
 
 // Returns the component
