@@ -84,7 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Axes.cpp" />
-    <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="BoxColliderComponent.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="Color.cpp" />
@@ -101,6 +101,7 @@
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="Physics2D.cpp" />
     <ClCompile Include="PlayerInputComponent.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -120,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Axes.hpp" />
-    <ClInclude Include="BoxCollider.hpp" />
+    <ClInclude Include="BoxColliderComponent.hpp" />
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Clock.hpp" />
     <ClInclude Include="Color.hpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="InputManager.hpp" />
     <ClInclude Include="Keyboard.hpp" />
     <ClInclude Include="Log.hpp" />
+    <ClInclude Include="Physics2D.hpp" />
     <ClInclude Include="PlayerInputComponent.hpp" />
     <ClInclude Include="ResourceManager.hpp" />
     <ClInclude Include="Scene.hpp" />
