@@ -34,10 +34,10 @@ public:
 private:
 	// The Amount of Axes/Buttons in the project. Default is 15.
 	int m_Size;
+	// Vector of all the axis.
 	std::vector<Axes> m_Axis;
+	// Vector of all the axis names
 	std::vector<std::string> m_AxisNames;
-
-	// So the InputManager can move the player accordingly.
 
 };
 #endif
