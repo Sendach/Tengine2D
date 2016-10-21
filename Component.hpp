@@ -4,6 +4,7 @@
 
 // Forward Declare the class, so it now it exists.
 class GameObject;
+#include "Window.hpp"
 
 // C++ Standard Library
 #include <memory>
@@ -20,6 +21,12 @@ public:
 
 	// Returns the name of the component
 	virtual const std::string getName() const = 0;
+
+	virtual void draw(t2d::Window& window)
+	{
+		// Do Nothing
+	}
+
 };
 
 #endif
