@@ -49,15 +49,22 @@ namespace t2d {
 		m_Window.setKeyRepeatEnabled(false);
 	}
 
-	// Draw to the screen.
+	// Draws a sprite to the screen
 	void Window::draw(Sprite& sprite)
 	{
 		Draw::draw(m_Window, sprite);
 	}
 
+	// Draws text tot he screen
 	void Window::draw(Text& text)
 	{
 		Draw::draw(m_Window, text);
+	}
+
+	// Draws a rectangle to the screen
+	void Window::draw(Rectangle& rect)
+	{
+		Draw::draw(m_Window, rect);
 	}
 
 	// Clears the screen.

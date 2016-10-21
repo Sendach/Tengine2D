@@ -3,7 +3,7 @@
 #define WINDOW_HPP
 
 // SFML.
-#include <SFML\Graphics\RenderWindow.hpp>
+
 
 // C++ Standard Library.
 #include <string>
@@ -44,6 +44,10 @@ namespace t2d {
 		void draw(Sprite& sprite);
 		//  Draws a text to the screen
 		void draw(Text& text);
+		// Draws a rectangle to the screen
+		void draw(Rectangle& rect);
+		
+
 		// Clears the screens.
 		void clear();
 		// Clears the screen with user-given color.
