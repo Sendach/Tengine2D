@@ -3,15 +3,19 @@
 #define BOXCOLLIDER_HPP
 
 // Engine Classes
-#include "Vector2.hpp"
-#include "Component.hpp"
-#include "GameObject.hpp"
 
+#include "ColliderComponent.hpp"
+#include "Rectangle.hpp"
+
+// Forward Declarations
+class GameObject;
+class TransformComponent;
+class Window;
 // C++ Standard Library
 #include <string>
 
 // A Class that creates a tight rectangle box around a sprite, 
-class BoxColliderComponent : public Component
+class BoxColliderComponent : public ColliderComponent
 {
 public:
 	BoxColliderComponent() { }
@@ -28,12 +32,16 @@ public:
 	// Returns the name of the component
 	virtual const std::string getName() const;
 
+	virtual void draw(t2d::Window& window);
+	
 private:
 
 	// Name of this component
 	std::string m_Name;
 	// The width and height of the rectangle.
 	t2d::Vector2f m_Size;
+	// Position of the rectangle
+	t2d::Vector2f m_Position;
 
 	// The GameObject this component is attached to.
 	GameObject* m_GameObject; 
@@ -53,7 +61,8 @@ private:
 	std::shared_ptr<TransformComponent> m_Transform;
 
 	// The box around the sprite. I have to create my own FloatRect class!!!
-	sf::FloatRect m_Box;
+	sf::RectangleShape rect;
+	Rectangle m_Rectangle;
 
 };
 
