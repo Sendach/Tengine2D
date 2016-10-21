@@ -99,7 +99,7 @@ Sprite& Sprite::setPosition(t2d::Vector2f& position)
 }
 
 // Gets the position of the sprite.
-const t2d::Vector2f& Sprite::getPosition() const
+const t2d::Vector2f Sprite::getPosition() const
 {
 	return m_Position;
 }
@@ -152,24 +152,18 @@ Sprite& Sprite::setScale(float x_factor, float y_factor)
 }
 
 // Gets the scaling of the sprite.
-const t2d::Vector2f& Sprite::getScale() const
+const t2d::Vector2f Sprite::getScale() const
 {
 	return m_Scale;
 }
 
-// Draw Class calls this function, which draws the sprite.
-void Sprite::draw(sf::RenderWindow& window, Sprite& sprite)
+sf::Sprite& Sprite::getsprite()
 {
-	window.draw(sprite._sprite);
-}
-
-Sprite& Sprite::getsprite()
-{
-	return *this;
+	return _sprite;
 }
 
 // Gets size of sprite, in width and height.
-const t2d::Vector2f& Sprite::getSize() const
+t2d::Vector2f Sprite::getSize() const
 {
 	return t2d::Vector2f(_sprite.getGlobalBounds().width, _sprite.getGlobalBounds().height);
 }

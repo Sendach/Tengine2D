@@ -85,7 +85,7 @@ Text& Text::setString(const std::string string)
 }
 
 // Gets the string attached to the text.
-const std::string& Text::getString() const
+const std::string Text::getString() const
 {
 	return m_String;
 }
@@ -111,7 +111,7 @@ Text& Text::setPosition(t2d::Vector2f& position)
 }
 
 // Gets the position of the sprite.
-const t2d::Vector2f& Text::getPosition() const
+const t2d::Vector2f Text::getPosition() const
 {
 	return m_Position;
 }
@@ -189,13 +189,12 @@ Text& Text::setScale(float x_factor, float y_factor)
 }
 
 // Gets the scaling of the text.
-const t2d::Vector2f& Text::getScale() const
+const t2d::Vector2f Text::getScale() const
 {
 	return m_Scale;
 }
 
-// Draw Class calls this function, which draws the text.
-void Text::draw(sf::RenderWindow& window, Text& text)
+sf::Text& Text::getText()
 {
-	window.draw(text._text);
+	return _text;
 }

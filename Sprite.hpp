@@ -42,7 +42,7 @@ public:
 	// Sets the position of sprite using t2d::Vector2f.
 	Sprite& setPosition(t2d::Vector2f& position);
 	// Gets the position of the sprite.
-	const t2d::Vector2f& getPosition() const;
+	const t2d::Vector2f getPosition() const;
 
 	// Sets the color of the sprite.
 	Sprite& setColor(const t2d::Color color);
@@ -59,16 +59,13 @@ public:
 	// Sets the scaling for the sprite using two float values for x and y. Overwrites previous scale
 	Sprite& setScale(float x_factor, float y_factor);
 	// Gets the scaling of the sprite.
-	const t2d::Vector2f& getScale() const;
+	const t2d::Vector2f getScale() const;
 
 	// Gets size of sprite, in width and height.
-	const t2d::Vector2f& getSize() const;
-
-	// Draw Class calls this function, which draws the sprite.
-	void draw(sf::RenderWindow& window, Sprite& sprite);
+	t2d::Vector2f getSize() const;
 
 	// Returns sprite
-	Sprite& getsprite();
+	sf::Sprite& getsprite();
 
 	sf::FloatRect& getGlobalBounds();
 

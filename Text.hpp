@@ -49,14 +49,14 @@ public:
 	// applies the string to the text.
 	Text& setString(const std::string string);
 	// Gets the string attached to the text.
-	const std::string& getString() const;
+	const std::string getString() const;
 
 	// Sets the position of the text.
 	Text& setPosition(float x, float y);
 	// Sets the position of text using t2d::Vector2f.
 	Text& setPosition(t2d::Vector2f& position);
 	// Gets the position of the sprite.
-	const t2d::Vector2f& getPosition() const;
+	const t2d::Vector2f getPosition() const;
 
 	// Sets the color of the text.
 	Text& setColor(const t2d::Color color);
@@ -83,10 +83,10 @@ public:
 	// Sets the scaling for the text using two float values for x and y. Overwrites previous scale
 	Text& setScale(float x_factor, float y_factor);
 	// Gets the scaling of the text.
-	const t2d::Vector2f& getScale() const;
+	const t2d::Vector2f getScale() const;
 
-	// Draw Class calls this function, which draws the text.
-	void draw(sf::RenderWindow& window, Text& text);
+	// Returns sfml's text variable
+	sf::Text& getText();
 
 private:
 
