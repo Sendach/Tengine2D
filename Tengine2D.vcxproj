@@ -87,6 +87,7 @@
     <ClCompile Include="BoxColliderComponent.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="ColliderComponent.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="CreateSprite.cpp" />
@@ -103,6 +104,7 @@
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Physics2D.cpp" />
     <ClCompile Include="PlayerInputComponent.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -124,6 +126,7 @@
     <ClInclude Include="BoxColliderComponent.hpp" />
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Clock.hpp" />
+    <ClInclude Include="ColliderComponent.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="CreateSprite.hpp" />
@@ -141,6 +144,7 @@
     <ClInclude Include="Log.hpp" />
     <ClInclude Include="Physics2D.hpp" />
     <ClInclude Include="PlayerInputComponent.hpp" />
+    <ClInclude Include="Rectangle.hpp" />
     <ClInclude Include="ResourceManager.hpp" />
     <ClInclude Include="Scene.hpp" />
     <ClInclude Include="Sprite.hpp" />
