@@ -8,6 +8,7 @@
 #include <memory>
 
 // Engine Classes
+
 /* Components */
 #include "Component.hpp"
 #include "PlayerInputComponent.hpp"
@@ -50,8 +51,8 @@ public:
 	
 	// A function that Fills our vector that holds all components (all_components)
 	// with the components that the engine has.
-	void initializeAllComponents();
-
+	void initializeAllComponents(std::string path = "", std::string name = "");
+	int counter = 0;
 	///////// Setters & Getters /////////
 
 	// Sets the object name
@@ -89,15 +90,18 @@ public:
 	//Other game objects, such the renderer will read and write the values stored in the transform. 
 	std::shared_ptr<TransformComponent> transform;
 
-	std::shared_ptr<Component>& getComponent(std::string componentName);
-private:
-
 	// All objects have a sprite renderer by default. It renders the sprite.
 	std::shared_ptr<SpriteRendererComponent> SpriteRenderer;
 
-	// Holds all ofthe components, e.g InputComponent, PhysicsComponent, RenderComponent.
-	std::vector<std::shared_ptr<Component>> m_Components;
+	
+	// Returns the component with the user-give name.
+	std::shared_ptr<Component>& getComponent(std::string componentName);
 
+private:
+
+	// Holds all ofthe components, e.g InputComponent, ColliderComponent, GraphicsComponent.
+	std::vector<std::shared_ptr<Component>> m_Components;
+	
 	// Holds all the components in the engine.
 	// When the player wants a component, he gives a name, and we can search the names of
 	// All the components in the engine, to find the one they want.

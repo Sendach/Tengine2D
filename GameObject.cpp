@@ -7,8 +7,6 @@
 #include <algorithm>
 #include <iostream>
 
-
-
 // Called when Object is created using createGameObject() in the Scene class.
 GameObject::GameObject()
 {
@@ -20,13 +18,6 @@ GameObject::GameObject()
 	m_Active = true;
 	m_EnableRender = true;
 	
-	// Initializing Default Components
-	transform = std::make_shared<TransformComponent>(this);
-	m_Components.push_back(transform);
-	SpriteRenderer = std::make_shared<SpriteRendererComponent>();
-	m_Components.push_back(SpriteRenderer);
-	
-
 	// Initialize the rest of the components, which the player can add.
 	initializeAllComponents();
 }
@@ -41,15 +32,9 @@ GameObject::GameObject(std::string path, std::string name, std::string tag, std:
 	m_Scene = nullptr;
 	m_Active = true;
 	m_EnableRender = true;
-
-	// Initializing Default Components
-	transform = std::make_shared<TransformComponent>(this);
-	m_Components.push_back(transform);
-	SpriteRenderer = std::make_shared<SpriteRendererComponent>(path, name);
-	m_Components.push_back(SpriteRenderer);
 	
 	// Initialize the rest of the components, which the player can add.
-	initializeAllComponents();
+	initializeAllComponents(path, name);
 }
 
 // Updates Everything. All components. A gameobjects input, rendering, physics etc.
@@ -59,6 +44,8 @@ void GameObject::update(float delta)
 	{
 		i->update(*this, delta);
 	}
+
+	transform->update(*this, delta);
 }
 
 // Draws the game object
@@ -68,21 +55,38 @@ void GameObject::render(t2d::Window& window)
 	{
 		if (m_EnableRender)
 		{
-			//window.draw(m_Scene->getSprite(m_SpriteRenderer->m_SpriteName));
-			SpriteRenderer->draw(window);
+			
+			for (auto& i : m_Components)
+			{
+				i->draw(window);
+			}
 		}
+
+		
 	}
 }
 
 // A function that Fills our vector that holds all components (all_components)
 // with the components that the engine has.
-void GameObject::initializeAllComponents()
+void GameObject::initializeAllComponents(std::string path, std::string name)
 {
-	all_components.push_back(std::make_shared<PlayerInputComponent>());
+	// Individual Component vectors
+	
+	// Transform
+	transform = std::make_shared<TransformComponent>(this);
+	m_Components.push_back(transform); 
+
+	// Graphics
+	SpriteRenderer = std::make_shared<SpriteRendererComponent>(path, name);
+	m_Components.push_back(SpriteRenderer);
+
+	// Collider
+	std::shared_ptr<Component> m_BoxCollider = std::make_shared<BoxColliderComponent>(this, transform);
+
+	// Vector of all components
 	all_components.push_back(SpriteRenderer);
 	all_components.push_back(transform);
-	all_components.push_back(std::make_shared<BoxColliderComponent>(this, transform));
-
+	all_components.push_back(m_BoxCollider);
 }
 
 // Allows User to add components to their GameObject.
@@ -107,6 +111,9 @@ void GameObject::removeComponent(std::string componentName)
 			// https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom
 			m_Components.erase(std::remove(m_Components.begin(), m_Components.end(), i), m_Components.end());
 		}
+
+		
+			
 	}
 	
 	
