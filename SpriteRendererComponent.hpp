@@ -22,10 +22,11 @@ public:
 	
 	virtual void draw(t2d::Window& window);
 
-private:
-	// The sprite the component renders
-	Sprite m_Sprite;
+	// Setters & Getters //
+
 	
+private:
+
 	// Path to load sprite
 	std::string m_Path;
 	// Name of the sprite
